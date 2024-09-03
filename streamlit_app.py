@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels
+import seaborn as sns
 from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
