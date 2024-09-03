@@ -77,8 +77,9 @@ def predecir_caza(provincias, animales):
         plt.tight_layout()
         plt.grid(True)
         st.pyplot(fig) 
-    except len(provincias) == 0 or len(animales) == 0:
-      print("Es obligatorio seleccionar por lo menos una provincia y animal.")
+    
+    except (len(provincias) == 0) or (len(animales) == 0):
+      print("Es obligatorio seleccionar por lo menos una provincia y/o animal.")
     
     resultados = pd.DataFrame(resultados)
     resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
