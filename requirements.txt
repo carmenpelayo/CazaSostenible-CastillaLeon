@@ -1,6 +1,6 @@
 streamlit
 pandas
-marplotlib
+matplotlib
 numpy
 statsmodels
 warnings
