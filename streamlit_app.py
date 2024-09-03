@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("🔍 Tu estrategia de caza")
-st.write("""¡Encuentra la mejor forma de cazar en Castilla y La Mancha!""")
+st.write("""¡Encuentra la mejor forma de cazar en Castilla y León!""")
 st.markdown("""---""")
 
 # DIMENSION 1: Ubicación
