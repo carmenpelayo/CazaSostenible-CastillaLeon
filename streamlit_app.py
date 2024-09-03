@@ -83,7 +83,7 @@ def predecir_caza(provincias, animales):
 
 # RESULTADOS
 if result:
-    match = predecir_caza(opcion1, opcion2) 
+    match = predecir_caza(opcion1, opcion2).round({"Predicción caza mínima": 0, "Predicción caza media": 0, "Predicción caza máxima": 0})
     st.balloons()
     st.markdown("""---""")
     st.subheader("🏆 ¡Tus resultados!")
