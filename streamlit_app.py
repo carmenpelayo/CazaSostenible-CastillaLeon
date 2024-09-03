@@ -6,7 +6,7 @@ import statsmodels
 from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
-st.title("🔍 Tu estrategia de caza")
+st.title("Tu estrategia de caza")
 
 # ELECCIÓN 1: Ubicación
 st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
@@ -67,7 +67,7 @@ def predecir_caza(provincias, animales):
       ax.plot(temporadas_ext[-2:], capturas_ext[-2:], label='Previsión', linestyle='--', color='r', linewidth=2, marker='o', markersize=10)
       ax.fill_between(temporadas_ext[-2:], lower_bound, upper_bound, color='grey', alpha=0.3, label='Intervalo de Confianza 95%')
       ax.annotate(int(prediction), xy=('2023-2024', prediction), xytext=(10, 10), textcoords='offset points', fontsize=12, color='red')
-      ax.set_title(f'Previsión de caza de {animal} en {provincia} para la temporada 2023-2024 (confianza del 95%).', fontsize=16)
+      ax.set_title(f'Previsión de caza de {animal} en {provincia} para la temporada 2023-2024 (confianza del 95%)', fontsize=16)
       ax.set_xlabel('Temporada', fontsize=14)
       ax.set_ylabel('Capturas', fontsize=14)
       ax.legend(loc='upper left', fontsize=12)
