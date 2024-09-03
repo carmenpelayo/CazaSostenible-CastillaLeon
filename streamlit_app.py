@@ -6,7 +6,7 @@ import statsmodels
 from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
-st.title("Tu estrategia de caza")
+st.title("¡Configura tu estrategia de caza en Castilla y León en 30 segundos!")
 
 # ELECCIÓN 1: Ubicación
 st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
