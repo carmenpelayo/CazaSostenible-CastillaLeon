@@ -13,12 +13,12 @@ st.markdown("""---""")
 
 # ELECCIÓN 1: Ubicación
 st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
-provincias = ['BURGOS','SEGOVIA','SORIA','AVILA','LEON','VALLADOLID','PALENCIA','ZAMORA','SALAMANCA']
+provincias = ['AVILA', 'BURGOS', 'LEON', 'PALENCIA', 'SALAMANCA', 'SEGOVIA', 'SORIA', 'VALLADOLID', 'ZAMORA']
 opcion1 = st.multiselect("", provincias)
 
 # ELECCIÓN 2: Animal
 st.subheader("🐗 ¿Qué animal(es) quieres cazar?")
-animales = ['JABALÍ', 'LOBO', 'CORZO', 'VENADO', 'REBECO', 'CABRA MONTÉS', 'MUFLÓN', 'GAMO', 'CONEJO', 'LIEBRE', 'ZORRO', 'PALOMA ZURITA', 'PALOMA BRAVÍA', 'PALOMA TORCAZ', 'TÓRTOLA', 'CODORNIZ', 'BECADA', 'URRACAS,GRAJILLAS', 'PATO REAL O AZULÓN', 'OTRAS AVES ACUÁTICAS', 'ZORZAL', 'PERDIZ ROJA', 'FAISÁN', 'CORNEJAS', 'CÓRVIDOS', 'CIERVO', 'ÁNADE REAL O AZULÓN', 'ZORZALES']
+animales = ['BECADA', 'CABRA MONTÉS', 'CIERVO', 'CODORNIZ', 'CONEJO', 'CORNEJAS', 'CORZO', 'CÓRVIDOS', 'FAISÁN', 'GAMO', 'JABALÍ', 'LIEBRE', 'LOBO', 'MUFLÓN', 'OTRAS AVES ACUÁTICAS', 'PALOMA BRAVÍA', 'PALOMA TORCAZ', 'PALOMA ZURITA', 'PATO REAL O AZULÓN', 'PERDIZ ROJA', 'REBECO', 'TÓRTOLA', 'URRACAS,GRAJILLAS', 'VENADO', 'ZORRO', 'ZORZAL', 'ZORZALES', 'ÁNADE REAL O AZULÓN']
 opcion2 = st.multiselect("", animales)
 
 # RECOMENDACIÓN
@@ -63,7 +63,7 @@ def predecir_caza(provincias, animales):
             })
       
       # Visualization
-      plt.style.use('dark_background')  # Set style
+      #plt.style.use('dark_background')  # Set style
       fig, ax = plt.subplots(figsize=(12, 8))
       ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
@@ -92,4 +92,5 @@ if result:
     st.markdown("""---""")
     st.subheader("🏆 ¡Tus resultados!")
     st.write("Según tus preferencias, la **previsión de caza** para la **temporada 2023-2024** es...")
-    st.table(match.head(10))
+    st.table(match)
+    st.write("Si no ves las previsiones de alguna de las búsquedas, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.")
