@@ -63,7 +63,7 @@ def predecir_caza(provincias, animales):
             })
       
       # Visualization
-      plt.style.use('seaborn-darkgrid')  # Set style
+      #plt.style.use('seaborn-darkgrid')  # Set style
       fig, ax = plt.subplots(figsize=(12, 8))
       ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
