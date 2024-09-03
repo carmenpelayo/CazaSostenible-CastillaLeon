@@ -62,21 +62,20 @@ def predecir_caza(provincias, animales):
             })
       
       # Visualization
-      plt.figure(figsize=(10, 6))
-      plt.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b')
+      fig, ax = plt.subplots(figsize=(10, 6))
+      ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b')
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
       capturas_ext = list(capturas) + [prediction]
-      plt.plot(temporadas_ext[-2:], capturas_ext[-2:], label='Previsión', linestyle='-', color='r')
-      plt.fill_between(temporadas_ext[-2:], lower_bound, upper_bound, color='grey', alpha=0.3)
-      plt.title(f'Previsión de caza de {animal} en {provincia} para la temporada 2023-2024 (confianza del 95%).')
-      plt.xlabel('Temporada')
-      plt.ylabel('Capturas')
-      plt.legend(loc='upper left')
-      plt.xticks(rotation=45)
+      ax.plot(temporadas_ext[-2:], capturas_ext[-2:], label='Previsión', linestyle='-', color='r')
+      ax.fill_between(['2023-2024'], lower_bound, upper_bound, color='grey', alpha=0.3)
+      ax.set_title(f'Previsión de caza de {animal} en {provincia} para la temporada 2023-2024 (confianza del 95%).')
+      ax.set_xlabel('Temporada')
+      ax.set_ylabel('Capturas')
+      ax.legend(loc='upper left')
+      ax.tick_params(axis='x', rotation=45)
       plt.tight_layout()
       plt.grid(True)
-      plt.show()
-      st.pyplot(figure)
+      st.pyplot(fig)  
   
   resultados = pd.DataFrame(resultados)
   resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
