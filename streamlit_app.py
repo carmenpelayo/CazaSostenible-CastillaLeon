@@ -33,7 +33,8 @@ def predecir_caza(provincias, animales):
   resultados = []
   
   if not provincias or not animales:
-        return "Es obligatorio seleccionar por lo menos una provincia y/o animal."
+    st.warning("Es obligatorio seleccionar al menos una provincia y un animal.")
+    return pd.DataFrame()
     
   for provincia in provincias:
     for animal in animales:
