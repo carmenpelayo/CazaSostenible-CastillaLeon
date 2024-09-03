@@ -1,5 +1,4 @@
-streamlit
-pandas
-numpy
-statsmodels
-warnings
+streamlit==1.38.0
+pandas==2.2.2
+numpy==1.24.2
+statsmodels==0.14.2
