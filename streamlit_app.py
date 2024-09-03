@@ -31,11 +31,6 @@ caza = pd.read_csv("resultados-temporadas-cinegeticas.csv", sep=";")
 # Predicción
 def predecir_caza(provincias, animales):
   resultados = []
-  
-  if not provincias or not animales:
-    st.warning("Es obligatorio seleccionar al menos una provincia y un animal.")
-    return pd.DataFrame()
-    
   for provincia in provincias:
     for animal in animales:
       # Time series preparation
@@ -88,10 +83,13 @@ def predecir_caza(provincias, animales):
 
 # RESULTADOS
 if result:
+  if not opcion1 or not opcion2:
+        st.warning("Es obligatorio seleccionar al menos una provincia y un animal.")
+  else:
     st.balloons()
     st.markdown("""---""")
     st.subheader("🏆 ¡Tus resultados!")
     st.write("Según tus preferencias, la **previsión de caza** para la **temporada 2023-2024** es...")
     match = predecir_caza(opcion1, opcion2)
     st.table(match)
-    st.write("Si no ves las previsiones de alguna de las búsquedas, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.")
+    st.write("*Si no ves las previsiones de alguna de las búsquedas en la tabla, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.*")
