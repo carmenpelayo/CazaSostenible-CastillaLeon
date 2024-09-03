@@ -61,7 +61,7 @@ def predecir_caza(provincias, animales):
                 "Previsión de caza máxima": upper_bound
             })
       resultados = pd.DataFrame(resultados)
-      resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"].astype(int)
+      resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)
       
       # Visualization
       '''
