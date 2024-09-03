@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels
-import seaborn as sns
 from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
@@ -63,7 +62,6 @@ def predecir_caza(provincias, animales):
             })
       
       # Visualization
-      #plt.style.use('dark_background')  # Set style
       fig, ax = plt.subplots(figsize=(12, 8))
       ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
