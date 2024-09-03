@@ -56,12 +56,15 @@ def predecir_caza(provincias, animales):
       resultados.append({
                 "Provincia": provincia,
                 "Animal": animal,
-                "Predicción caza mínima": lower_bound,
-                "Predicción caza media": prediction,
-                "Predicción caza máxima": upper_bound
+                "Previsión de caza mínima": lower_bound,
+                "Previsión de caza media": prediction,
+                "Previsión de caza máxima": upper_bound
             })
-      '''
+      resultados = pd.DataFrame(resultados)
+      resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"].astype(int)
+      
       # Visualization
+      '''
       plt.figure(figsize=(10, 6))
       plt.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b')
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
@@ -77,7 +80,8 @@ def predecir_caza(provincias, animales):
       plt.grid(True)
       plt.show()
       '''
-  return pd.DataFrame(resultados).round()
+      
+  return resultados
 
 # RESULTADOS
 if result:
