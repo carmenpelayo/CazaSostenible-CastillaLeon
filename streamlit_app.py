@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels
 import seaborn as sns
+sns.set(style='darkgrid')
 from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
