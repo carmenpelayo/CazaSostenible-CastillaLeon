@@ -76,6 +76,7 @@ def predecir_caza(provincias, animales):
       plt.tight_layout()
       plt.grid(True)
       plt.show()
+      st.pyplot(fig)
   
   resultados = pd.DataFrame(resultados)
   resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
