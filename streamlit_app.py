@@ -12,15 +12,15 @@ st.markdown("""---""")
 
 # ELECCIÓN 1: Ubicación
 st.subheader("📍 Paso 1: Ubicación")
-st.write('**¿En qué provincia quieres cazar?**')
+st.write('**¿En qué provincia(s) quieres cazar?**')
 provincias = ['BURGOS','SEGOVIA','SORIA','AVILA','LEON','VALLADOLID','PALENCIA','ZAMORA','SALAMANCA']
-opcion1 = st.multiselect("", provincias)
+opcion1 = st.multiselect("Elige una o varias provincias.", provincias)
 
 # ELECCIÓN 2: Animal
 st.subheader("🐗 Paso 2: Animal")
 st.write('**¿Qué animal quieres cazar?**')
 animales = ['JABALÍ', 'LOBO', 'CORZO', 'VENADO', 'REBECO', 'CABRA MONTÉS', 'MUFLÓN', 'GAMO', 'CONEJO', 'LIEBRE', 'ZORRO', 'PALOMA ZURITA', 'PALOMA BRAVÍA', 'PALOMA TORCAZ', 'TÓRTOLA', 'CODORNIZ', 'BECADA', 'URRACAS,GRAJILLAS', 'PATO REAL O AZULÓN', 'OTRAS AVES ACUÁTICAS', 'ZORZAL', 'PERDIZ ROJA', 'FAISÁN', 'CORNEJAS', 'CÓRVIDOS', 'CIERVO', 'ÁNADE REAL O AZULÓN', 'ZORZALES']
-opcion2 = st.multiselect("", animales)
+opcion2 = st.multiselect("Elige uno o varios animales.", animales)
 
 # RECOMENDACIÓN
 result = st.button('¡Recomiéndame!')
