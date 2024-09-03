@@ -7,8 +7,6 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 st.title("🔍 Tu estrategia de caza")
-st.write("""¡Encuentra la mejor forma de cazar en Castilla y León!""")
-st.markdown("""---""")
 
 # ELECCIÓN 1: Ubicación
 st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
@@ -85,10 +83,10 @@ def predecir_caza(provincias, animales):
 
 # RESULTADOS
 if result:
-    match = predecir_caza(opcion1, opcion2)
     st.balloons()
     st.markdown("""---""")
     st.subheader("🏆 ¡Tus resultados!")
     st.write("Según tus preferencias, la **previsión de caza** para la **temporada 2023-2024** es...")
+    match = predecir_caza(opcion1, opcion2)
     st.table(match)
     st.write("Si no ves las previsiones de alguna de las búsquedas, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.")
