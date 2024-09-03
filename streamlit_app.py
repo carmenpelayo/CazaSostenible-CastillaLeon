@@ -89,7 +89,6 @@ if result:
     st.balloons()
     st.markdown("""---""")
     st.subheader("🏆 ¡Tus resultados!")
-    st.write("Según tus preferencias, la **previsión de caza** para la **temporada 2023-2024** es...")
     match = predecir_caza(opcion1, opcion2)
     st.table(match)
     st.write("*Si no ves las previsiones de alguna de las búsquedas en la tabla, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.*")
