@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels
 from statsmodels.tsa.arima.model import ARIMA
@@ -62,7 +62,6 @@ def predecir_caza(provincias, animales):
             })
       
       # Visualization
-      '''
       plt.figure(figsize=(10, 6))
       plt.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b')
       temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
@@ -77,7 +76,6 @@ def predecir_caza(provincias, animales):
       plt.tight_layout()
       plt.grid(True)
       plt.show()
-      '''
   
   resultados = pd.DataFrame(resultados)
   resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
