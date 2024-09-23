@@ -100,7 +100,7 @@ if seleccion == "Inicio":
       elif animal == "ÁNADE REAL O AZULÓN":
         image_path = "images/ANADE_REAL_O_AZULON.jpg"
       else:
-        image_path = "images/" + animal_path + ".jpg"
+        image_path = "images/" + animal + ".jpg"
       st.image(image_path, width=300)
       # Periodo de caza
       st.write("📆 El **periodo de caza legal** es: ", periodos_caza[animal])
