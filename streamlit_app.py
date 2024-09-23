@@ -112,9 +112,9 @@ if seleccion == "Consejos de Caza Sostenible":
     
     # Periodos de caza
     periodos_caza = {
-        'Becada': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
-        'Cabra Montés': ['15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio', 'https://www.boe.es/diario_boe/'],
-        'Ciervo': ['1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Becada': ['22 de octubre al 28 de enero', '[Boletín Oficial del Estado](https://www.boe.es/diario_boe/)'],
+        'Cabra Montés': ['15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio', '[Boletín Oficial del Estado](https://www.boe.es/diario_boe/)'],
+        'Ciervo': ['1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero', '[Boletín Oficial del Estado](https://www.boe.es/diario_boe/)'],
         'Codorniz': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
         'Conejo': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
         'Cornejas y Córvidos': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
