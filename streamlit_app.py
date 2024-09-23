@@ -113,9 +113,6 @@ if seleccion == "Inicio":
         capturas = capturas.fillna(0)
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
-        if nonzero_counts <= 10 or  zero_counts >= 10: # Check if there are less than 10 non-zero records in the series
-            st.warning("Información insuficiente para hacer la predicción.")
-            continue  # Skip to the next iteration
         # Modeling
         arima = ARIMA(capturas, order=(2,0,2))
         results = arima.fit()
@@ -153,7 +150,6 @@ if seleccion == "Inicio":
         # Handle case when no results are found
     if not resultados:
         st.warning("No se encontraron suficientes datos para generar una predicción. Por favor, reinicia la búsqueda con otros parámetros.")
-        return None 
 
     resultados = pd.DataFrame(resultados)
     resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
