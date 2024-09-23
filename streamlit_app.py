@@ -79,7 +79,7 @@ def predecir_caza(provincias, animales):
 
       # Image
       image_path = "images/" + animal + ".jpg"
-      st.image(image_path, width=175)
+      st.image(image_path)
 
     resultados = pd.DataFrame(resultados)
     resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
