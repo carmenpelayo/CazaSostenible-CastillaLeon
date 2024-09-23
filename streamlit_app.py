@@ -113,6 +113,8 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/CABRA_MONTES.jpg"
       elif animal == "CÓRVIDOS":
         image_path = "images/CORVIDOS.png"
+      elif animal == "CORZO":
+        image_path = "images/CORZO.png"
       elif animal == "FAISÁN":
         image_path = "images/FAISAN.jpg"
       elif animal == "JABALÍ":
