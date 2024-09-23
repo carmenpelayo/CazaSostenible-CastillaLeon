@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["Predicción de Capturas", "Consejos de Caza Sostenible"]
+secciones = ["Prepara tu estrategia de caza", "Consejos de caza sostenible"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
@@ -45,7 +45,7 @@ periodos_caza = {
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
 # Sección de Caza Responsable
-if seleccion == "Predicción de Capturas:
+if seleccion == "Prepara tu estrategia de caza":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 30 segundos!")
   
   # ELECCIÓN 1: Ubicación
@@ -175,7 +175,7 @@ if seleccion == "Predicción de Capturas:
       match = predecir_caza(opcion1, opcion2)
       
 # Sección de Caza Responsable
-if seleccion == "Consejos de Caza Sostenible":
+if seleccion == "Consejos de caza sostenible":
     st.title("Consejos para una Caza Responsable")
     
     # Buenas prácticas y consejos
