@@ -33,7 +33,7 @@ periodos_caza = {
     'PALOMA BRAVÍA': '25 de agosto al 3er domingo de septiembre (media veda).',
     'PALOMA TORCAZ': '1 de octubre al 2º domingo de febrero.',
     'PALOMA ZURITA': '1 de octubre al 2º domingo de febrero.',
-    'PATO REAL': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
+    'PATO REAL O AZULÓN': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
     'PERDIZ ROJA': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
     'REBECO': '1 de mayo al 15 de julio; 1 de septiembre al 15 de noviembre.',
     'TÓRTOLA': 'Caza prohibida. Cupo: 0 ejemplares por cazador y día.',
