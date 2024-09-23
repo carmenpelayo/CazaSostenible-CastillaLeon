@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["🎯 Tu Estrategia de Caza Sostenible", "✏️ Buenas Prácticas"]
+secciones = ["🎯 ¡Traza tu estrategia de caza sostenible!", "🎓 ¡Aprende más sobre la caza sostenible!"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
@@ -45,12 +45,11 @@ periodos_caza = {
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
 # Sección de Caza Responsable
-if seleccion == "🎯 Tu Estrategia de Caza Sostenible":
+if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 10 segundos!")
-  st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
   st.write("""Con esta herramienta, podrás trazar tu **estrategia de caza sostenible**, la cual **maximizará tu probabilidad de éxito** en tus sesiones de caza 
-              (mediante la predicción de la combinación ubicación-animal que maximiza la captura de animales) respetando también los periodos legales de 
-              captura de animales (lo cual permite la conservación de su ciclo de reproducción natural).""")
+              (mediante la predicción de la combinación ubicación-animal que maximiza la captura de animales) mientras que **respetará los periodos legales de 
+              captura de animales** (lo cual permite la preservación de su ciclo de reproducción natural).""")
   
   # ELECCIÓN 1: Ubicación
   st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
@@ -179,12 +178,14 @@ if seleccion == "🎯 Tu Estrategia de Caza Sostenible":
       match = predecir_caza(opcion1, opcion2)
       
 # Sección de Caza Responsable
-if seleccion == "Consejos de caza sostenible":
-    st.title("Consejos para una Caza Responsable")
+if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!"]:
+    st.title("Aprende más sobre la caza sostenible")
+    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Estos objetivos están en línea con el Objetivo 15 de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
+    st.image("images/ods.png", width=300)
     
     # Buenas prácticas y consejos
-    st.subheader("✏️ Buenas Prácticas")
-    st.write("La caza responsable no solo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
+    st.subheader("✏️ Buenas prácticas")
+    st.write("La caza sostenible no sólo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
     
     # Consejos detallados
     consejos = {
