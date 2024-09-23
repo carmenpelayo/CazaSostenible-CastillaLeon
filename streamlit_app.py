@@ -85,6 +85,8 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/FAISAN.jpg"
       elif animal == "JABALÍ":
         image_path = "images/JABALI.jpg"
+      elif animal == "LOBO":
+        image_path = "images/LOBO.png"
       elif animal == "MUFLÓN":
         image_path = "images/MUFLON.jpg"
       elif animal == "OTRAS AVES ACUÁTICAS":
