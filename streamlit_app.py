@@ -12,6 +12,35 @@ secciones = ["Inicio", "Consejos de Caza Sostenible"]
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
+# Periodos de caza
+    periodos_caza = {
+    'BECADA': '22 de octubre al 28 de enero',
+    'CABRA MONTÉS': '15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio',
+    'CIERVO': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
+    'CODORNIZ': '15 de agosto al 3º domingo de septiembre',
+    'CONEJO': '15 de agosto al 3º domingo de septiembre',
+    'CORNEJAS Y CÓRVIDOS': '15 de agosto al 3º domingo de septiembre',
+    'FAISÁN': '22 de octubre al 28 de enero',
+    'GAMO': '4º domingo de septiembre al 4º domingo de febrero',
+    'JABALÍ': '1 de abril al 1er domingo de agosto (rececho); 4º domingo de septiembre al 4º domingo de febrero',
+    'LIEBRE': '22 de octubre al 28 de enero',
+    'LOBO': 'Según el plan cinegético aprobado',
+    'MUFLÓN': '4º domingo de septiembre al 4º domingo de febrero',
+    'AVES ACUÁTICAS': '22 de octubre al 28 de enero',
+    'PALOMA BRAVÍA': '25 de agosto al 3º domingo de septiembre',
+    'PALOMA TORCAZ': '1 de octubre al 2º domingo de febrero',
+    'PALOMA ZURITA': '1 de octubre al 2º domingo de febrero',
+    'PATO REAL': '22 de octubre al 28 de enero',
+    'PERDIZ ROJA': '22 de octubre al 28 de enero',
+    'REBECO': '1 de septiembre al 15 de noviembre; 1 de mayo al 15 de julio',
+    'TÓRTOLA': 'Caza prohibida',
+    'URRACAS Y GRAJILLAS': '15 de agosto al 3º domingo de septiembre',
+    'VENADO': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
+    'ZORRO': 'Durante la temporada general y media veda',
+    'ZORZALES': '1 de octubre al 2º domingo de febrero',
+    }
+    periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
+
 # Sección de Caza Responsable
 if seleccion == "Inicio":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 30 segundos!")
@@ -68,10 +97,12 @@ if seleccion == "Inicio":
               })
   
         # Image
+        st.subheader(animal)
         image_path = "images/" + animal + ".jpg"
         st.image(image_path)
-        
+
         # Visualization
+        st.write("Predicción de caza de", animal, "para la próxima temporada.")
         fig, ax = plt.subplots(figsize=(12, 8))
         ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
         temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
@@ -87,8 +118,10 @@ if seleccion == "Inicio":
         ax.tick_params(axis='y', labelsize=12)
         plt.tight_layout()
         plt.grid(True)
-        st.pyplot(fig) 
-  
+        st.pyplot(fig)
+
+        st.write("El periodo de caza legal es: ", periodos_caza[animal])
+
       resultados = pd.DataFrame(resultados)
       resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
       
@@ -109,37 +142,9 @@ if seleccion == "Inicio":
 # Sección de Caza Responsable
 if seleccion == "Consejos de Caza Sostenible":
     st.title("Consejos para una Caza Responsable")
-    
-    # Periodos de caza
-    periodos_caza = {
-    'Becada': '22 de octubre al 28 de enero',
-    'Cabra Montés': '15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio',
-    'Ciervo': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-    'Codorniz': '15 de agosto al 3º domingo de septiembre',
-    'Conejo': '15 de agosto al 3º domingo de septiembre',
-    'Cornejas y Córvidos': '15 de agosto al 3º domingo de septiembre',
-    'Faisán': '22 de octubre al 28 de enero',
-    'Gamo': '4º domingo de septiembre al 4º domingo de febrero',
-    'Jabalí': '1 de abril al 1er domingo de agosto (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-    'Liebre': '22 de octubre al 28 de enero',
-    'Lobo': 'Según el plan cinegético aprobado',
-    'Muflón': '4º domingo de septiembre al 4º domingo de febrero',
-    'Aves Acuáticas': '22 de octubre al 28 de enero',
-    'Paloma Bravía': '25 de agosto al 3º domingo de septiembre',
-    'Paloma Torcaz': '1 de octubre al 2º domingo de febrero',
-    'Paloma Zurita': '1 de octubre al 2º domingo de febrero',
-    'Pato Real': '22 de octubre al 28 de enero',
-    'Perdiz Roja': '22 de octubre al 28 de enero',
-    'Rebeco': '1 de septiembre al 15 de noviembre; 1 de mayo al 15 de julio',
-    'Tórtola': 'Caza prohibida',
-    'Urracas y Grajillas': '15 de agosto al 3º domingo de septiembre',
-    'Venado': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-    'Zorro': 'Durante la temporada general y media veda',
-    'Zorzales': '1 de octubre al 2º domingo de febrero',
-    }
-  
-    df = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
-    st.table(df)
+
+    st.subheader("Períodos de caza legal en Castilla y León")
+    st.table(periodos)
     
     # Buenas prácticas y consejos
     st.subheader("Consejos para una Caza Sostenible")
