@@ -138,9 +138,10 @@ if seleccion == "Consejos de Caza Sostenible":
         'Zorzales': '1 de octubre al 2º domingo de febrero',
     }
 
+    st.table(periodos_caza)
     # Mostrar los periodos en la app
-    for especie, periodo in periodos_caza.items():
-        st.write(f"**{especie}**: {periodo}")
+    #for especie, periodo in periodos_caza.items():
+        #st.write(f"**{especie}**: {periodo}")
     
     # Buenas prácticas y consejos
     st.subheader("Consejos para una Caza Sostenible")
