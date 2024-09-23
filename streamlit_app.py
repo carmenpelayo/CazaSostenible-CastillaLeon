@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["🎯 ¡Traza tu estrategia de caza sostenible!", "🎓 ¡Aprende más sobre la caza sostenible!"]
+secciones = ["🏆 ¡Traza tu estrategia de caza sostenible!", "🎓 ¡Aprende más sobre la caza sostenible!"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
@@ -74,9 +74,37 @@ descripciones = {
     "ZORZAL": "El zorzal es un ave migratoria que se alimenta de insectos y frutos, migrando grandes distancias."
 }
 
+modo_caza = {
+    "ÁNADE REAL O AZULÓN": "Se caza en humedales o ríos mediante puestos fijos o al vuelo.",
+    "BECADA": "Se caza principalmente mediante la técnica de caza al salto con perros de muestra, en bosques y zonas húmedas.",
+    "CABRA MONTÉS": "Se caza mediante rececho en terrenos montañosos, siguiendo su rastro y observando desde largas distancias.",
+    "CIERVO": "Se caza principalmente en montería, batida o rececho, dependiendo de la zona y las condiciones.",
+    "CODORNIZ": "Se caza al salto, normalmente con la ayuda de perros, en terrenos abiertos o campos de cultivo.",
+    "CONEJO": "Se caza al salto o con hurones, a menudo en zonas de matorrales o campos de cultivo.",
+    "CORNEJAS": "Se caza con escopeta, atrayéndolas mediante reclamo o en batidas organizadas.",
+    "CORZO": "Se caza mediante rececho o en batidas, especialmente durante la temporada de celo en zonas boscosas.",
+    "CÓRVIDOS": "Se cazan en batidas o con cimbeles (reclamos), sobre todo en cultivos donde pueden causar daños.",
+    "FAISÁN": "Se caza al salto con perros o en sueltas organizadas en terrenos abiertos y de caza menor.",
+    "GAMO": "Se caza en monterías, batidas o rececho en terrenos amplios y de monte bajo.",
+    "JABALÍ": "Se caza en monterías, batidas o aguardos nocturnos, aprovechando su actividad nocturna.",
+    "LIEBRE": "Se caza al salto con perros de rastro o de carrera (galgos) en llanuras o campos abiertos.",
+    "LOBO": "Se caza mediante aguardos, rececho o batida en terrenos montañosos o boscosos.",
+    "MUFLÓN": "Se caza en rececho, sobre todo en zonas montañosas o de difícil acceso.",
+    "PALOMA BRAVÍA": "Se caza en puestos fijos, a menudo con cimbeles o desde escondites estratégicos.",
+    "PALOMA TORCAZ": "Se caza en pasos migratorios desde puestos fijos o al vuelo.",
+    "PALOMA ZURITA": "Similar a la torcaz, se caza al vuelo en pasos migratorios o en cercanías de cultivos.",
+    "PATO REAL O AZULÓN": "Se caza en humedales o lagunas mediante la técnica de puesto fijo o al vuelo.",
+    "PERDIZ ROJA": "Se caza al salto con perros o en ojeo, una modalidad donde los cazadores esperan su salida.",
+    "REBECO": "Se caza en rececho en alta montaña, siguiendo rastros y observando desde lejos.",
+    "TÓRTOLA": "Se caza al vuelo en puestos fijos durante la migración, frecuentemente cerca de cultivos.",
+    "URRACAS": "Se cazan con escopeta, a menudo mediante reclamo o en batidas.",
+    "VENADO": "Se caza en montería, batida o rececho, aprovechando el celo y las grandes extensiones de monte.",
+    "ZORRO": "Se caza en batidas, aguardos o al salto, a menudo en zonas donde causa daños.",
+    "ZORZAL": "Se caza en pasos migratorios desde puestos fijos o al vuelo en zonas de olivares."
+}
 
 # Sección de Caza Responsable
-if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
+if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 10 segundos!")
   st.write("""Con esta herramienta, podrás trazar tu **estrategia de caza sostenible**, la cual **maximizará tu probabilidad de éxito** en tus sesiones de caza 
               (mediante la predicción de la combinación ubicación-animal que optimiza la captura de animales) **preservando los ciclos naturales de reproducción animal**
@@ -144,12 +172,13 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
       else:
         image_path = "images/" + animal + ".jpg"
       st.image(image_path, width=300)
-      st.write("🤓 ", descripciones[animal])
-      # Periodo de caza
+
+      st.write("✏️ ", descripciones[animal])
+      st.write("🎯 ", modo_caza[animal])
       st.write("📆 El **periodo de caza legal** es ", periodos_caza[animal])
       
       for provincia in provincias:
-        st.write("🎯 La **previsión de caza** en ", provincia, " para la próxima temporada:")
+        st.write("📈 La **previsión de caza** en ", provincia, " para la próxima temporada:")
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
