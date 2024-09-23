@@ -77,7 +77,7 @@ if seleccion == "Prepara tu estrategia de caza":
       if animal == "CABRA MONTÉS":
         image_path = "images/CABRA_MONTES.jpg"
       elif animal == "CÓRVIDOS":
-        image_path = "images/CORVIDOS.jpg"
+        image_path = "images/CORVIDOS.png"
       elif animal == "FAISÁN":
         image_path = "images/FAISAN.jpg"
       elif animal == "JABALÍ":
