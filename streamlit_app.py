@@ -173,7 +173,7 @@ if seleccion == "Inicio":
       st.markdown("""---""")
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
-      st.download_button(label="Descargar recomendaciones", data=match.to_excel(), file_name="recomendaciones.csv", mime='text/csv')
+      st.download_button(label="Descargar recomendaciones", data=match.to_csv(), file_name="recomendaciones.csv", mime='text/csv')
       
 # Sección de Caza Responsable
 if seleccion == "Consejos de Caza Sostenible":
