@@ -193,7 +193,7 @@ if seleccion == "Consejos de Caza Sostenible":
     # Periodos de caza
     st.subheader("📆 Períodos de caza legal en Castilla y León")
     st.table(periodos)
-    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html#:~:text=Corzo%3A,el%20cuarto%20domingo%20de%20febrero).")
+    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
     
     
 
