@@ -123,10 +123,10 @@ if seleccion == "Inicio":
         # Periodo de caza
         st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
 
-      resultados = pd.DataFrame(resultados)
-      resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
-      
-      return resultados
+    resultados = pd.DataFrame(resultados)
+    resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
+    
+    return resultados
   
   # RESULTADOS
   if result:
