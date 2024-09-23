@@ -167,8 +167,7 @@ if seleccion == "Inicio":
       st.markdown("""---""")
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
-      st.write("*Si no ves las previsiones de alguna de las búsquedas en la tabla, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.*")
-
+      
 # Sección de Caza Responsable
 if seleccion == "Consejos de Caza Sostenible":
     st.title("Consejos para una Caza Responsable")
