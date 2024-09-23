@@ -71,7 +71,36 @@ if seleccion == "Inicio":
     for animal in animales:
       # Animal image
       st.subheader(animal)
-      image_path = "images/" + animal + ".jpg"
+      if animal == "CABRA MONTÉS":
+        image_path = "images/CABRA_MONTES.jpg"
+      elif animal == "CÓRVIDOS":
+        image_path = "images/CORVIDOS.jpg"
+      elif animal == "FAISÁN":
+        image_path = "images/FAISAN.jpg"
+      elif animal == "JABALÍ":
+        image_path = "images/JABALI.jpg"
+      elif animal == "MUFLÓN":
+        image_path = "images/MUFLON.jpg"
+      elif animal == "OTRAS AVES ACUÁTICAS":
+        image_path = "images/OTRAS_AVES_ACUATICAS.jpg"
+      elif animal == "PALOMA BRAVÍA":
+        image_path = "images/PALOMA_BRAVIA.jpg"
+      elif animal == "PALOMA TORCAZ":
+        image_path = "images/PALOMA_TORCAZ.jpg"
+      elif animal == "PALOMA ZURITA":
+        image_path = "images/PALOMA_ZURITA.jpg"
+      elif animal == "PATO REAL O AZULÓN":
+        image_path = "images/PATO_REAL_O_AZULON.jpg"
+      elif animal == "PERDIZ ROJA":
+        image_path = "images/PERDIZ_ROJA.jpg"
+      elif animal == "TÓRTOLA":
+        image_path = "images/TORTOLA.jpg"
+      elif animal == "URRACAS,GRAJILLAS":
+        image_path = "images/URRACAS_GRAJILLAS.jpg"
+      elif animal == "ÁNADE REAL O AZULÓN":
+        image_path = "images/ANADE_REAL_O_AZULON.jpg"
+      else:
+        image_path = "images/" + animal_path + ".jpg"
       st.image(image_path, width=300)
       # Periodo de caza
       st.write("📆 El **periodo de caza legal** es: ", periodos_caza[animal])
