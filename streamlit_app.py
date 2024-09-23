@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["Prepara tu estrategia de caza", "Consejos de caza sostenible"]
+secciones = ["🎯 Tu Estrategia de Caza Sostenible", "✏️ Buenas Prácticas"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
@@ -45,8 +45,12 @@ periodos_caza = {
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
 # Sección de Caza Responsable
-if seleccion == "Prepara tu estrategia de caza":
-  st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 30 segundos!")
+if seleccion == "🎯 Tu Estrategia de Caza Sostenible":
+  st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 10 segundos!")
+  st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
+  st.write("""Con esta herramienta, podrás trazar tu **estrategia de caza sostenible**, la cual **maximizará tu probabilidad de éxito** en tus sesiones de caza 
+              (mediante la predicción de la combinación ubicación-animal que maximiza la captura de animales) respetando también los periodos legales de 
+              captura de animales (lo cual permite la conservación de su ciclo de reproducción natural).""")
   
   # ELECCIÓN 1: Ubicación
   st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
@@ -179,10 +183,8 @@ if seleccion == "Consejos de caza sostenible":
     st.title("Consejos para una Caza Responsable")
     
     # Buenas prácticas y consejos
-    st.subheader("✏️ Consejos para una Caza Sostenible")
-    st.write("""
-    La caza responsable no solo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:
-    """)
+    st.subheader("✏️ Buenas Prácticas")
+    st.write("La caza responsable no solo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
     
     # Consejos detallados
     consejos = {
@@ -232,7 +234,7 @@ if seleccion == "Consejos de caza sostenible":
 
     # Periodos de caza
     st.subheader("📆 Períodos de caza legal en Castilla y León")
-    st.write("Es esencial conocer los periodos de caza legal para cada especie, ya que esto contribuye a la conservación de la biodiversidad y permite a los cazadores planificar sus actividades de manera responsable.")
+    st.write("Limitando tus sesiones de caza a los periodos permitidos, estás **respetando el ciclo natural de reproducción de los animales**, contribuyendo así a la **conservación de la biodiversidad en Castilla y León**.")
     st.table(periodos)
     st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
     
