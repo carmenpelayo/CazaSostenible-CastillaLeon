@@ -117,7 +117,8 @@ if seleccion == "Inicio":
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
         if nonzero_counts <= 10 or zero_counts >= 10:
-          continue
+            st.warning(f"Información insuficiente para predecir la caza de {animal} en {provincia}.")
+            continue
         # Modeling
         arima = ARIMA(capturas, order=(2,0,2))
         results = arima.fit()
@@ -154,7 +155,6 @@ if seleccion == "Inicio":
 
     # Handle case when no results are found
     if not resultados:
-        st.warning("No se encontraron suficientes datos para generar una predicción. Por favor, reinicia la búsqueda con otros parámetros.")
         return None
     # If there are results:
     else: 
