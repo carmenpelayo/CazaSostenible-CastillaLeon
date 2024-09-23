@@ -84,7 +84,7 @@ if seleccion == "Inicio":
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
         if nonzero_counts <= 10 or  zero_counts >= 10: # Check if there are less than 10 non-zero records in the series
-            st.warning("Información insuficiente para predecir la caza de ", animal, " en ", provincia, ".")
+            st.warning("Información insuficiente para hacer la predicción.")
             continue  # Skip to the next iteration
         # Modeling
         arima = ARIMA(capturas, order=(2,0,2))
