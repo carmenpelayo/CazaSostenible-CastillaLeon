@@ -68,8 +68,15 @@ if seleccion == "Inicio":
   # Predicción
   def predecir_caza(provincias, animales):
     resultados = []
-    for provincia in provincias:
-      for animal in animales:
+    for animal in animales:
+      # Animal image
+      st.subheader(animal)
+      image_path = "images/" + animal + ".jpg"
+      st.image(image_path)
+      # Periodo de caza
+      st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
+      
+      for provincia in provincias:
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
@@ -77,7 +84,7 @@ if seleccion == "Inicio":
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
         if nonzero_counts <= 10 or  zero_counts >= 10: # Check if there are less than 10 non-zero records in the series
-            print(f"Información insuficiente para predecir la caza de {animal} en {provincia}.")
+            st.warning("Información insuficiente para predecir la caza de ", animal, " en ", provincia, ".")
             continue  # Skip to the next iteration
         # Modeling
         arima = ARIMA(capturas, order=(2,0,2))
@@ -95,12 +102,6 @@ if seleccion == "Inicio":
                   "Previsión de caza media": prediction,
                   "Previsión de caza máxima": upper_bound
               })
-  
-        # Image
-        st.subheader(animal)
-        image_path = "images/" + animal + ".jpg"
-        st.image(image_path)
-
         # Visualization
         st.write("La **previsión de caza** de", animal, "para la próxima temporada.")
         fig, ax = plt.subplots(figsize=(12, 8))
@@ -119,9 +120,6 @@ if seleccion == "Inicio":
         plt.tight_layout()
         plt.grid(True)
         st.pyplot(fig)
-
-        # Periodo de caza
-        st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
 
     resultados = pd.DataFrame(resultados)
     resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
