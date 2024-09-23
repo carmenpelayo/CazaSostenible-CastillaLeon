@@ -113,6 +113,8 @@ if seleccion == "Inicio":
         capturas = capturas.fillna(0)
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
+        if nonzero_counts <= 10 or zero_counts >= 10:
+          continue
         # Modeling
         arima = ARIMA(capturas, order=(2,0,2))
         results = arima.fit()
