@@ -102,7 +102,7 @@ if seleccion == "Inicio":
         st.image(image_path)
 
         # Visualization
-        st.write("Predicción de caza de", animal, "para la próxima temporada.")
+        st.write("La **previsión de caza** de", animal, "para la próxima temporada.")
         fig, ax = plt.subplots(figsize=(12, 8))
         ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
         temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
@@ -120,7 +120,8 @@ if seleccion == "Inicio":
         plt.grid(True)
         st.pyplot(fig)
 
-        st.write("El periodo de caza legal es: ", periodos_caza[animal])
+        # Periodo de caza
+        st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
 
       resultados = pd.DataFrame(resultados)
       resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
