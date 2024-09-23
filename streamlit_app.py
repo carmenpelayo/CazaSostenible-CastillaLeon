@@ -152,12 +152,10 @@ if seleccion == "Inicio":
         # Handle case when no results are found
     if not resultados:
       st.warning("No se encontraron suficientes datos para generar una predicción. Por favor, reinicia la búsqueda con otros parámetros.")
-      return ""
 
     resultados = pd.DataFrame(resultados)
     resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
-    
-    return resultados
+    return st.table(resultados)
   
   # RESULTADOS
   if result:
@@ -168,7 +166,6 @@ if seleccion == "Inicio":
       st.markdown("""---""")
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
-      st.table(match)
       st.write("*Si no ves las previsiones de alguna de las búsquedas en la tabla, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.*")
 
 # Sección de Caza Responsable
