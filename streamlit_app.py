@@ -14,7 +14,7 @@ seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
-    'ÁNADE REAL O AZULÓN': 'No se dispone de información',
+    'ÁNADE REAL O AZULÓN': 'No se dispone de información.',
     'BECADA': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente (modalidades al salto, a rabo y en mano). Cupo: 3 ejemplares por cazador y día.',
     'CABRA MONTÉS': '1 de marzo al 30 de junio; 15 de septiembre al 15 de diciembre.',
     'CIERVO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
@@ -179,13 +179,13 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
-      st.image("images/ODS.png", width=175)
+      st.image("images/ODS.png", width=250)
       
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("Aprende más sobre la caza sostenible")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Estos objetivos están en línea con el Objetivo 15 de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", width=175)
+    st.image("images/ODS.png", width=250)
     
     # Buenas prácticas y consejos
     st.subheader("✏️ Buenas prácticas")
