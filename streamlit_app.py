@@ -27,7 +27,7 @@ periodos_caza = {
     'GAMO': 'desde el primer domingo de Septiembre al cuarto sábado de septiembre (rececho y aguardo/espera) y del cuarto domingo de Septiembre al cuarto domingo de Febrero (en todas las modalidades).',
     'JABALÍ': 'del 1 de Abril al primer domingo de agosto (rececho y aguardo/espera); 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'LIEBRE': 'del 12 de Octubre al cuarto domingo de Enero (con galgo).',
-    'LOBO': '(La caza del lobo es ilegal en Castilla y León (*Sentencia del Tribunal de Justicia en el asunto C-436/22*).',
+    'LOBO': '(La caza del lobo es ilegal en Castilla y León, *Sentencia del Tribunal de Justicia en el asunto C-436/22*).',
     'MUFLÓN': 'durante todo el año (rececho y aguardo/espera); y del 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
     'OTRAS AVES ACUÁTICAS': 'desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
     'PALOMA BRAVÍA': 'del 25 de agosto al 3er domingo de septiembre (media veda).',
