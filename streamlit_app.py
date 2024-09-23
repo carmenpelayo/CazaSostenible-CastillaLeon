@@ -110,38 +110,35 @@ if seleccion == "Inicio":
 if seleccion == "Consejos de Caza Sostenible":
     st.title("Consejos para una Caza Responsable")
     
-    # Diccionario de especies y sus periodos de caza
+    # Periodos de caza
     periodos_caza = {
-        'Becada': '22 de octubre al 28 de enero',
-        'Cabra Montés': '15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio',
-        'Ciervo': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-        'Codorniz': '15 de agosto al 3º domingo de septiembre',
-        'Conejo': '15 de agosto al 3º domingo de septiembre',
-        'Cornejas y Córvidos': '15 de agosto al 3º domingo de septiembre',
-        'Faisán': '22 de octubre al 28 de enero',
-        'Gamo': '4º domingo de septiembre al 4º domingo de febrero',
-        'Jabalí': '1 de abril al 1er domingo de agosto (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-        'Liebre': '22 de octubre al 28 de enero',
-        'Lobo': 'Según el plan cinegético aprobado',
-        'Muflón': '4º domingo de septiembre al 4º domingo de febrero',
-        'Aves Acuáticas': '22 de octubre al 28 de enero',
-        'Paloma Bravía': '25 de agosto al 3º domingo de septiembre',
-        'Paloma Torcaz': '1 de octubre al 2º domingo de febrero',
-        'Paloma Zurita': '1 de octubre al 2º domingo de febrero',
-        'Pato Real': '22 de octubre al 28 de enero',
-        'Perdiz Roja': '22 de octubre al 28 de enero',
-        'Rebeco': '1 de septiembre al 15 de noviembre; 1 de mayo al 15 de julio',
-        'Tórtola': 'Caza prohibida',
-        'Urracas y Grajillas': '15 de agosto al 3º domingo de septiembre',
-        'Venado': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-        'Zorro': 'Durante la temporada general y media veda',
-        'Zorzales': '1 de octubre al 2º domingo de febrero',
+        'Becada': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Cabra Montés': ['15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio', 'https://www.boe.es/diario_boe/'],
+        'Ciervo': ['1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Codorniz': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
+        'Conejo': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
+        'Cornejas y Córvidos': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
+        'Faisán': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Gamo': ['4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Jabalí': ['1 de abril al 1er domingo de agosto (rececho); 4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Liebre': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Lobo': ['Según el plan cinegético aprobado', 'https://www.boe.es/diario_boe/'],
+        'Muflón': ['4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Aves Acuáticas': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Paloma Bravía': ['25 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
+        'Paloma Torcaz': ['1 de octubre al 2º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Paloma Zurita': ['1 de octubre al 2º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Pato Real': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Perdiz Roja': ['22 de octubre al 28 de enero', 'https://www.boe.es/diario_boe/'],
+        'Rebeco': ['1 de septiembre al 15 de noviembre; 1 de mayo al 15 de julio', 'https://www.boe.es/diario_boe/'],
+        'Tórtola': ['Caza prohibida', 'https://www.boe.es/diario_boe/'],
+        'Urracas y Grajillas': ['15 de agosto al 3º domingo de septiembre', 'https://www.boe.es/diario_boe/'],
+        'Venado': ['1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero', 'https://www.boe.es/diario_boe/'],
+        'Zorro': ['Durante la temporada general y media veda', 'https://www.boe.es/diario_boe/'],
+        'Zorzales': ['1 de octubre al 2º domingo de febrero', 'https://www.boe.es/diario_boe/']
     }
-
-    st.table(periodos_caza)
-    # Mostrar los periodos en la app
-    #for especie, periodo in periodos_caza.items():
-        #st.write(f"**{especie}**: {periodo}")
+    df = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Periodo de caza legal', 'Referencia'])
+    st.table(df)
     
     # Buenas prácticas y consejos
     st.subheader("Consejos para una Caza Sostenible")
