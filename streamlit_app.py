@@ -76,6 +76,7 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
     resultados = []
     for animal in animales:
       # Animal image
+      st.markdown("---")
       st.subheader(animal)
       if animal == "CABRA MONTÉS":
         image_path = "images/CABRA_MONTES.jpg"
