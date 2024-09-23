@@ -72,7 +72,7 @@ if seleccion == "Inicio":
       # Animal image
       st.subheader(animal)
       image_path = "images/" + animal + ".jpg"
-      st.image(image_path)
+      st.image(image_path, width=300)
       # Periodo de caza
       st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
       
