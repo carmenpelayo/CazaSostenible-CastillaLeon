@@ -14,31 +14,32 @@ seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
-'BECADA': '22 de octubre al 28 de enero',
-'CABRA MONTÉS': '15 de septiembre al 15 de diciembre; 1 de marzo al 30 de junio',
-'CIERVO': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-'CODORNIZ': '15 de agosto al 3º domingo de septiembre',
-'CONEJO': '15 de agosto al 3º domingo de septiembre',
-'CORNEJAS': '15 de agosto al 3º domingo de septiembre',
-'CÓRVIDOS': '15 de agosto al 3º domingo de septiembre',
-'FAISÁN': '22 de octubre al 28 de enero',
-'GAMO': '4º domingo de septiembre al 4º domingo de febrero',
-'JABALÍ': '1 de abril al 1er domingo de agosto (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-'LIEBRE': '22 de octubre al 28 de enero',
-'LOBO': 'Según el plan cinegético aprobado',
-'MUFLÓN': '4º domingo de septiembre al 4º domingo de febrero',
-'OTRAS AVES ACUÁTICAS': '22 de octubre al 28 de enero',
-'PALOMA BRAVÍA': '25 de agosto al 3º domingo de septiembre',
-'PALOMA TORCAZ': '1 de octubre al 2º domingo de febrero',
-'PALOMA ZURITA': '1 de octubre al 2º domingo de febrero',
-'PATO REAL': '22 de octubre al 28 de enero',
-'PERDIZ ROJA': '22 de octubre al 28 de enero',
-'REBECO': '1 de septiembre al 15 de noviembre; 1 de mayo al 15 de julio',
-'TÓRTOLA': 'Caza prohibida',
-'URRACAS,GRAJILLAS': '15 de agosto al 3º domingo de septiembre',
-'VENADO': '1 de septiembre al 4º sábado de septiembre (rececho); 4º domingo de septiembre al 4º domingo de febrero',
-'ZORRO': 'Durante la temporada general y media veda',
-'ZORZALES': '1 de octubre al 2º domingo de febrero',
+    'BECADA': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente (modalidades al salto, a rabo y en mano). Cupo: 3 ejemplares por cazador y día.',
+    'CABRA MONTÉS': '1 de marzo al 30 de junio; 15 de septiembre al 15 de diciembre.',
+    'CIERVO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
+    'CODORNIZ': '15 de agosto al 3er domingo de septiembre. Cupo: 20 ejemplares por cazador y día.',
+    'CONEJO': '15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORNEJA': '15 de agosto al 3er domingo de septiembre (media veda).',
+    'CÓRVIDOS': '15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORZO': 'Para ambos sexos: 1 de abril al 1er domingo de agosto, y del 1 de septiembre al 2º domingo de octubre. Solo hembras: 1 de enero al 4º domingo de febrero.',
+    'FAISÁN': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
+    'GAMO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
+    'JABALÍ': '1 de abril al 1er domingo de agosto (rececho y aguardo/espera); 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'LIEBRE': 'Liebre con galgo: 12 de octubre al 4º domingo de enero.',
+    'LOBO': 'Según el plan cinegético aprobado.',
+    'MUFLÓN': 'Rececho y aguardo/espera durante todo el año; 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
+    'OTRAS AVES ACUÁTICAS': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
+    'PALOMA BRAVÍA': '25 de agosto al 3er domingo de septiembre (media veda).',
+    'PALOMA TORCAZ': '1 de octubre al 2º domingo de febrero.',
+    'PALOMA ZURITA': '1 de octubre al 2º domingo de febrero.',
+    'PATO REAL': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
+    'PERDIZ ROJA': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
+    'REBECO': '1 de mayo al 15 de julio; 1 de septiembre al 15 de noviembre.',
+    'TÓRTOLA': 'Caza prohibida. Cupo: 0 ejemplares por cazador y día.',
+    'URRACAS,GRAJILLAS': '15 de agosto al 3er domingo de septiembre (media veda).',
+    'VENADO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
+    'ZORRO': 'Durante la temporada general, en media veda y en cualquier caza mayor. Media veda: 15 de agosto al 3er domingo de septiembre.',
+    'ZORZALES': '1 de octubre al 2º domingo de febrero.'
 }
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
@@ -172,9 +173,9 @@ if seleccion == "Inicio":
 # Sección de Caza Responsable
 if seleccion == "Consejos de Caza Sostenible":
     st.title("Consejos para una Caza Responsable")
-
     st.subheader("Períodos de caza legal en Castilla y León")
     st.table(periodos)
+    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html#:~:text=Corzo%3A,el%20cuarto%20domingo%20de%20febrero)."
     
     # Buenas prácticas y consejos
     st.subheader("Consejos para una Caza Sostenible")
