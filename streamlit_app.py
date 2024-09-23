@@ -48,8 +48,8 @@ periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Perí
 if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 10 segundos!")
   st.write("""Con esta herramienta, podrás trazar tu **estrategia de caza sostenible**, la cual **maximizará tu probabilidad de éxito** en tus sesiones de caza 
-              (mediante la predicción de la combinación ubicación-animal que maximiza la captura de animales) mientras que **respetará los periodos legales de 
-              captura de animales** (lo cual permite la preservación de su ciclo de reproducción natural).""")
+              (mediante la predicción de la combinación ubicación-animal que optimiza la captura de animales) **preservando los ciclos naturales de reproducción animal**
+              (mediante la limitación de las sesiones a los periodos legales de captura de animales).""")
   
   # ELECCIÓN 1: Ubicación
   st.subheader("📍 ¿En qué provincia(s) quieres cazar?")
