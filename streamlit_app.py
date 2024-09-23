@@ -74,10 +74,10 @@ if seleccion == "Inicio":
       image_path = "images/" + animal + ".jpg"
       st.image(image_path, width=300)
       # Periodo de caza
-      st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
+      st.write("📆 El **periodo de caza legal** es: ", periodos_caza[animal])
       
       for provincia in provincias:
-        st.write("La **previsión de caza** de", animal, " en ", provincia, " para la próxima temporada:")
+        st.write("🎯 La **previsión de caza** de", animal, " en ", provincia, " para la próxima temporada:")
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
