@@ -44,6 +44,37 @@ periodos_caza = {
 }
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
+descripciones = {
+    "ÁNADE REAL O AZULÓN": "El ánade real es el pato más común en Europa, reconocido por la cabeza verde del macho.",
+    "BECADA": "La becada es un ave migratoria de hábitos nocturnos que se oculta en bosques densos.",
+    "CABRA MONTÉS": "La cabra montés habita en terrenos montañosos y se caracteriza por su agilidad en zonas escarpadas.",
+    "CIERVO": "El ciervo es el mayor herbívoro de los bosques europeos, famoso por su majestuosa cornamenta.",
+    "CODORNIZ": "La codorniz es un ave pequeña y migratoria que prefiere zonas abiertas como campos de cultivo.",
+    "CONEJO": "El conejo es una especie clave en los ecosistemas ibéricos, siendo presa de muchos depredadores.",
+    "CORNEJAS": "Las cornejas son aves oportunistas y carroñeras que pueden afectar cultivos.",
+    "CORZO": "El corzo es el cérvido más pequeño de Europa, conocido por su agudo sentido del olfato.",
+    "CÓRVIDOS": "Los córvidos son aves inteligentes y sociales que a menudo son cazadas por su impacto en cultivos.",
+    "FAISÁN": "El faisán, de plumaje colorido, es una especie introducida que se cría para la caza en Europa.",
+    "GAMO": "El gamo se distingue por su cornamenta en forma de pala y su pelaje moteado.",
+    "JABALÍ": "El jabalí es un animal omnívoro y adaptable, cuya población ha crecido rápidamente en algunas regiones.",
+    "LIEBRE": "La liebre es un corredor veloz que se desplaza en hábitats abiertos como pastizales y cultivos.",
+    "LOBO": "El lobo es un depredador clave para el equilibrio de los ecosistemas, controlando las poblaciones de herbívoros.",
+    "MUFLÓN": "El muflón es un carnero salvaje originario de Europa que habita en zonas montañosas.",
+    "OTRAS AVES ACUÁTICAS": "Las aves acuáticas dependen de humedales para su supervivencia, lo que las hace vulnerables a la pérdida de hábitat.",
+    "PALOMA BRAVÍA": "La paloma bravía es conocida por su capacidad para adaptarse a entornos urbanos y rurales.",
+    "PALOMA TORCAZ": "La paloma torcaz es la mayor de las palomas ibéricas, famosa por su vuelo rápido y poderoso.",
+    "PALOMA ZURITA": "La paloma zurita es más pequeña que la torcaz y se distingue por su pecho grisáceo.",
+    "PATO REAL O AZULÓN": "El pato real es fácilmente reconocible por su cabeza verde iridiscente en los machos.",
+    "PERDIZ ROJA": "La perdiz roja es una especie emblemática en España, conocida por su resistencia y comportamiento gregario.",
+    "REBECO": "El rebeco es un animal ágil de alta montaña, con cuernos curvados característicos.",
+    "TÓRTOLA": "La tórtola es un ave migratoria cuyo canto melódico es característico del verano.",
+    "URRACAS, GRAJILLAS": "Las urracas y grajillas son córvidos conocidos por su habilidad para sobrevivir en entornos cambiantes.",
+    "VENADO":"El venado, también conocido como ciervo, es una especie majestuosa que habita en bosques y praderas.",
+    "ZORRO": "El zorro es un depredador versátil, conocido por su astucia y adaptación a diversos entornos.",
+    "ZORZAL": "El zorzal es un ave migratoria que se alimenta de insectos y frutos, migrando grandes distancias."
+}
+
+
 # Sección de Caza Responsable
 if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 10 segundos!")
@@ -111,6 +142,7 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
       else:
         image_path = "images/" + animal + ".jpg"
       st.image(image_path, width=300)
+      st.write(descripciones[animal])
       # Periodo de caza
       st.write("📆 El **periodo de caza legal** es: ", periodos_caza[animal])
       
@@ -149,7 +181,6 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
         ax.plot(temporadas_ext[-2:], capturas_ext[-2:], label='Previsión', linestyle='--', color='r', linewidth=2, marker='o', markersize=10)
         ax.fill_between(temporadas_ext[-2:], lower_bound, upper_bound, color='grey', alpha=0.3, label='Intervalo de Confianza 95%')
         ax.annotate(int(prediction), xy=('2023-2024', prediction), xytext=(10, 10), textcoords='offset points', fontsize=12, color='red')
-        #ax.set_title(f'Previsión de caza de {animal} en {provincia} para la temporada 2023-2024 (confianza del 95%)', fontsize=16)
         ax.set_xlabel('Temporada', fontsize=14)
         ax.set_ylabel('Capturas', fontsize=14)
         ax.legend(loc='upper left', fontsize=12)
@@ -176,7 +207,6 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
           st.warning("Es obligatorio seleccionar al menos una provincia y un animal.")
     else:
       st.balloons()
-      st.markdown("""---""")
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
