@@ -107,8 +107,8 @@ if seleccion == "Inicio":
       st.write("*Si no ves las previsiones de alguna de las búsquedas en la tabla, significa que no existen datos suficientes para predecir la caza de la temporada 2023-2024.*")
 
 # Sección de Caza Responsable
-if seleccion == "Caza Responsable":
-    st.title("Buenas Prácticas y Consejos para una Caza Responsable")
+if seleccion == "Consejos de Caza Sostenible":
+    st.title("Consejos para una Caza Responsable")
     
     # Diccionario de especies y sus periodos de caza
     periodos_caza = {
