@@ -77,6 +77,7 @@ if seleccion == "Inicio":
       st.write("El **periodo de caza legal** es: ", periodos_caza[animal])
       
       for provincia in provincias:
+        st.write("La **previsión de caza** de", animal, " en ", provincia, " para la próxima temporada:")
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
@@ -103,7 +104,6 @@ if seleccion == "Inicio":
                   "Previsión de caza máxima": upper_bound
               })
         # Visualization
-        st.write("La **previsión de caza** de", animal, "para la próxima temporada.")
         fig, ax = plt.subplots(figsize=(12, 8))
         ax.plot(animal_provincia.TEMPORADA, capturas, label='Histórico', marker='o', linestyle='-', color='b', markersize=8)
         temporadas_ext = list(animal_provincia.TEMPORADA) + ['2023-2024']
