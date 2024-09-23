@@ -158,8 +158,10 @@ if seleccion == "Inicio":
         return None
     # If there are results:
     else: 
+        st.write("⭐ Para maximizar tu probabilidad de éxito, te recomendamos que cases...")
         resultados = pd.DataFrame(resultados)
-        resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)   
+        resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)
+        resultados = resultados.sort_values(by=['Previsión de caza media']
         return st.table(resultados)
   
   # RESULTADOS
