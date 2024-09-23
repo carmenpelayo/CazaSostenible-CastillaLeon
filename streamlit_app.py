@@ -90,7 +90,7 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
       elif animal == "MUFLÓN":
         image_path = "images/MUFLON.jpg"
       elif animal == "OTRAS AVES ACUÁTICAS":
-        image_path = "images/OTRAS_AVES_ACUATICAS.jpg"
+        image_path = "images/OTRAS-AVES-ACUATICAS.jpg"
       elif animal == "PALOMA BRAVÍA":
         image_path = "images/PALOMA_BRAVIA.jpg"
       elif animal == "PALOMA TORCAZ":
