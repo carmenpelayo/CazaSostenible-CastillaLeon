@@ -139,6 +139,8 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.subheader(animal)
       if animal == "CABRA MONTÉS":
         image_path = "images/CABRA_MONTES.jpg"
+      elif animal == "CORNEJA":
+        image_path = "images/CORNEJA.png"
       elif animal == "CÓRVIDOS":
         image_path = "images/CORVIDOS.png"
       elif animal == "CORZO":
