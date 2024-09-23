@@ -7,10 +7,10 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["Inicio", "Consejos de Caza Sostenible"]
+#secciones = ["Inicio", "Consejos de Caza Sostenible"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
-seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
+#seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
@@ -45,7 +45,7 @@ periodos_caza = {
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
 # Sección de Caza Responsable
-if seleccion == "Inicio":
+def prediccion():
   st.title("¡Configura tu estrategia de caza sostenible en Castilla y León en 30 segundos!")
   
   # ELECCIÓN 1: Ubicación
@@ -175,7 +175,7 @@ if seleccion == "Inicio":
       match = predecir_caza(opcion1, opcion2)
       
 # Sección de Caza Responsable
-if seleccion == "Consejos de Caza Sostenible":
+def consejos():
     st.title("Consejos para una Caza Responsable")
     
     # Buenas prácticas y consejos
@@ -194,6 +194,12 @@ if seleccion == "Consejos de Caza Sostenible":
     st.subheader("📆 Períodos de caza legal en Castilla y León")
     st.table(periodos)
     st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
+
+tab1, tab2 = st.tabs(["Predicción de capturas", "Consejos de caza sostenible"])
+with tab1:
+    prediccion()
+with tab2:
+    consejos()
     
     
 
