@@ -77,7 +77,7 @@ if seleccion == "Inicio":
       st.write("📆 El **periodo de caza legal** es: ", periodos_caza[animal])
       
       for provincia in provincias:
-        st.write("🎯 La **previsión de caza** de", animal, " en ", provincia, " para la próxima temporada:")
+        st.write("🎯 La **previsión de caza** en ", provincia, " para la próxima temporada:")
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
