@@ -14,12 +14,13 @@ seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
+    'ÁNADE REAL O AZULÓN': 'No se dispone de información',
     'BECADA': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente (modalidades al salto, a rabo y en mano). Cupo: 3 ejemplares por cazador y día.',
     'CABRA MONTÉS': '1 de marzo al 30 de junio; 15 de septiembre al 15 de diciembre.',
     'CIERVO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
     'CODORNIZ': '15 de agosto al 3er domingo de septiembre. Cupo: 20 ejemplares por cazador y día.',
     'CONEJO': '15 de agosto al 3er domingo de septiembre (media veda).',
-    'CORNEJA': '15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORNEJAS': '15 de agosto al 3er domingo de septiembre (media veda).',
     'CÓRVIDOS': '15 de agosto al 3er domingo de septiembre (media veda).',
     'CORZO': 'Para ambos sexos: 1 de abril al 1er domingo de agosto, y del 1 de septiembre al 2º domingo de octubre. Solo hembras: 1 de enero al 4º domingo de febrero.',
     'FAISÁN': 'Desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
@@ -39,7 +40,7 @@ periodos_caza = {
     'URRACAS,GRAJILLAS': '15 de agosto al 3er domingo de septiembre (media veda).',
     'VENADO': '1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
     'ZORRO': 'Durante la temporada general, en media veda y en cualquier caza mayor. Media veda: 15 de agosto al 3er domingo de septiembre.',
-    'ZORZALES': '1 de octubre al 2º domingo de febrero.'
+    'ZORZAL': '1 de octubre al 2º domingo de febrero.'
 }
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
