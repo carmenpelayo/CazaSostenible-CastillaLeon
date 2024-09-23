@@ -176,9 +176,11 @@ if seleccion == "🎯 ¡Traza tu estrategia de caza sostenible!":
       st.markdown("""---""")
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
+      st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
+      st.image("images/ods.png")
       
 # Sección de Caza Responsable
-if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!"]:
+if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("Aprende más sobre la caza sostenible")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Estos objetivos están en línea con el Objetivo 15 de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
     st.image("images/ods.png", width=300)
