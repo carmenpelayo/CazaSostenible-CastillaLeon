@@ -177,12 +177,9 @@ if seleccion == "Inicio":
 # Sección de Caza Responsable
 if seleccion == "Consejos de Caza Sostenible":
     st.title("Consejos para una Caza Responsable")
-    st.subheader("Períodos de caza legal en Castilla y León")
-    st.table(periodos)
-    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html#:~:text=Corzo%3A,el%20cuarto%20domingo%20de%20febrero).")
     
     # Buenas prácticas y consejos
-    st.subheader("Consejos para una Caza Sostenible")
+    st.subheader("✏️ Consejos para una Caza Sostenible")
     st.write("""
     - **Respetar los periodos de caza**: Siempre asegúrate de conocer y seguir las fechas legales para cada especie.
     - **Licencias y permisos**: Asegúrate de contar con la licencia de caza actualizada y permisos específicos para la especie que planeas cazar.
@@ -192,5 +189,12 @@ if seleccion == "Consejos de Caza Sostenible":
     - **Conservación del hábitat**: Minimiza el impacto ambiental durante la caza, cuidando la flora y fauna local.
     - **Recoge tus residuos**: No dejes basura en la naturaleza, incluyendo cartuchos de munición.
     """)
+
+    # Periodos de caza
+    st.subheader("📆 Períodos de caza legal en Castilla y León")
+    st.table(periodos)
+    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html#:~:text=Corzo%3A,el%20cuarto%20domingo%20de%20febrero).")
+    
+    
 
 
