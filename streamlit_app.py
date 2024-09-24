@@ -58,7 +58,7 @@ descripciones = {
     "GAMO": "El gamo se distingue por su cornamenta en forma de pala y su pelaje moteado.",
     "JABALÍ": "El jabalí es un animal omnívoro y adaptable, cuya población ha crecido rápidamente en algunas regiones.",
     "LIEBRE": "La liebre es un corredor veloz que se desplaza en hábitats abiertos como pastizales y cultivos.",
-    "LOBO": "El lobo es un depredador clave para el equilibrio de los ecosistemas, controlando las poblaciones de herbívoros.",
+    "LOBO": "El lobo es un depredador clave para el equilibrio de los ecosistemas, controlando las poblaciones de herbívoros. Sin embargo, también representa un peligro significativo para los ganaderos, ya que puede atacar al ganado y causar pérdidas económicas.",
     "MUFLÓN": "El muflón es un carnero salvaje originario de Europa que habita en zonas montañosas.",
     "OTRAS AVES ACUÁTICAS": "Las aves acuáticas dependen de humedales para su supervivencia, lo que las hace vulnerables a la pérdida de hábitat.",
     "PALOMA BRAVÍA": "La paloma bravía es conocida por su capacidad para adaptarse a entornos urbanos y rurales.",
@@ -151,7 +151,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       elif animal == "FAISÁN":
         image_path = "images/FAISAN.jpg"
       elif animal == "JABALÍ":
-        image_path = "images/JABALI.jpg"
+        image_path = "images/JABALI.png"
       elif animal == "LOBO":
         image_path = "images/LOBO.png"
       elif animal == "MUFLÓN":
