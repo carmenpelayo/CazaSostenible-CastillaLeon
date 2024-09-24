@@ -14,33 +14,32 @@ seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
-    'ÁNADE REAL O AZULÓN': '(No se dispone de información).',
-    'BECADA': 'desde el cuarto domingo de Octubre hasta el cuarto domingo de Enero del año siguiente (modalidades al salto, a rabo y en mano), con un cupo máximo de **3 ejemplares por cazador y día**.',
-    'CABRA MONTÉS': 'del 1 de Marzo al 30 de Junio y del 15 de Septiembre al 15 de Diciembre.',
-    'CIERVO': 'del primer domingo de Septiembre al cuarto sábado de Septiembre (rececho y aguardo/espera); y del cuarto domingo de Septiembre al cuarto domingo de Febrero en todas las modalidades.',
-    'CODORNIZ': 'del 15 de Agosto al tercer domingo de Septiembre, con un cupo máximo de 20 ejemplares por cazador y día.',
-    'CONEJO': 'del 15 de Agosto al tercer domingo de Septiembre (media veda).',
-    'CORNEJAS': 'del 15 de Agosto al tercer domingo de Septiembre (media veda).',
-    'CÓRVIDOS': 'del 15 de Agosto al tercer domingo de septiembre (media veda).',
-    'CORZO': 'del 1 de abril al primer domingo de Agosto y del 1 de Septiembre al segundo domingo de Octubre (para ambos sexos); del 1 de enero al cuarto domingo de febrero (sólo hembras).',
-    'FAISÁN': 'desde el cuarto domingo de Octubre hasta el cuarto domingo de Enero del año siguiente.',
-    'GAMO': 'desde el primer domingo de Septiembre al cuarto sábado de septiembre (rececho y aguardo/espera) y del cuarto domingo de Septiembre al cuarto domingo de Febrero (en todas las modalidades).',
-    'JABALÍ': 'del 1 de Abril al primer domingo de agosto (rececho y aguardo/espera); 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera); 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
-    'LIEBRE': 'del 12 de Octubre al cuarto domingo de Enero (con galgo).',
-    'LOBO': '(La caza del lobo es ilegal en Castilla y León, *Sentencia del Tribunal de Justicia en el asunto C-436/22*).',
-    'MUFLÓN': 'durante todo el año (rececho y aguardo/espera); y del 4º domingo de septiembre al 4º domingo de febrero en todas las modalidades.',
-    'OTRAS AVES ACUÁTICAS': 'desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
-    'PALOMA BRAVÍA': 'del 25 de agosto al 3er domingo de septiembre (media veda).',
-    'PALOMA TORCAZ': 'del 1 de octubre al 2º domingo de febrero.',
-    'PALOMA ZURITA': 'del 1 de octubre al 2º domingo de febrero.',
-    'PATO REAL O AZULÓN': 'desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
-    'PERDIZ ROJA': 'desde el cuarto domingo de octubre hasta el cuarto domingo de enero del año siguiente.',
-    'REBECO': 'del 1 de mayo al 15 de julio y del 1 de septiembre al 15 de noviembre.',
-    'TÓRTOLA': '(No existe periodo caza legal de la tórtola).',
-    'URRACAS,GRAJILLAS': 'del 15 de agosto al 3er domingo de septiembre (media veda).',
-    'VENADO': 'del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera) y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
-    'ZORRO': 'durante la temporada general (en media veda y en cualquier caza mayor) y del 15 de agosto al 3er domingo de septiembre (media veda).',
-    'ZORZAL': 'del 1 de octubre al 2º domingo de febrero.'
+    'BECADA': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente (modalidades al salto, a rabo y en mano), con un cupo máximo de 3 ejemplares por cazador y día.',
+    'CABRA MONTÉS': 'Del 1 de marzo al 30 de junio y del 15 de septiembre al 15 de diciembre.',
+    'CIERVO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'CODORNIZ': 'Del 15 de agosto al 3er domingo de septiembre, con un cupo máximo de 20 ejemplares por cazador y día.',
+    'CONEJO': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORNEJA': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'CÓRVIDOS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORZO': 'Ambos sexos: del 1 de abril al 1er domingo de agosto, y del 1 de septiembre al 2º domingo de octubre. Sólo hembras: del 1 de enero al 4º domingo de febrero.',
+    'FAISÁN': 'Del 4º domingo de octubre al 4º domingo de enero del año siguiente.',
+    'GAMO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'JABALÍ': 'Del 1 de abril al 1er domingo de agosto y del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'LIEBRE': 'Del 12 de octubre al 4º domingo de enero (con galgo).',
+    'LOBO': 'La caza de lobo no está permitida ahora mismo en Castilla y León (ver la Sentencia del Tribunal de Justicia en el asunto C-436/22).',
+    'MUFLÓN': 'Durante todo el año (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'OTRAS AVES ACUÁTICAS': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
+    'PALOMA BRAVÍA': 'Del 25 de agosto al 3er domingo de septiembre (media veda).',
+    'PALOMA TORCAZ': 'Del 1 de octubre al 2º domingo de febrero.',
+    'PALOMA ZURITA': 'Del 1 de octubre al 2º domingo de febrero.',
+    'PATO REAL': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
+    'PERDIZ ROJA': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
+    'REBECO': 'Del 1 de mayo al 15 de julio y del 1 de septiembre al 15 de noviembre.',
+    'TÓRTOLA': 'La caza de tórtola no está permitida ahora mismo en Castilla y León.',
+    'URRACAS,GRAJILLAS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'VENADO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
+    'ZORRO': 'Durante la temporada general (media veda y cualquier caza mayor), y del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'ZORZALES': 'Del 1 de octubre al 2º domingo de febrero.'
 }
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
@@ -173,14 +172,14 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/ANADE_REAL_O_AZULON.jpg"
       else:
         image_path = "images/" + animal + ".jpg"
-      st.image(image_path, width=300)
+      st.image(image_path, use_column_width="auto")
 
-      st.write("✏️ ", descripciones[animal])
-      st.write("🎯 ", modo_caza[animal])
-      st.write("📆 El **periodo de caza legal** es ", periodos_caza[animal])
+      st.write("✏️ **Descripción**: ", descripciones[animal])
+      st.write("🎯 **Cómo cazar**: ", modo_caza[animal])
+      st.write("📆 **Periodo de caza legal**: ", periodos_caza[animal])
       
       for provincia in provincias:
-        st.write("📈 La **previsión de caza** en ", provincia, " para la próxima temporada:")
+        st.write("📈 **Previsión de capturas** en ", provincia, " para la próxima temporada:")
         # Time series preparation
         animal_provincia = caza[(caza.Provincia == provincia) & (caza.ESPECIE == animal)]
         capturas = animal_provincia['capturas']
@@ -243,13 +242,13 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
-      st.image("images/ODS.png", width=500)
+      st.image("images/ODS.png", use_column_width="auto")
       
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
-    st.title("Aprende más sobre la caza sostenible")
-    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Estos objetivos están en línea con el Objetivo 15 de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", width=500)
+    st.title("¡Aprende más sobre la caza sostenible!")
+    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
+    st.image("images/ODS.png", use_column_width="auto)
     
     # Buenas prácticas y consejos
     st.subheader("✏️ Buenas prácticas")
