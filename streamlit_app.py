@@ -334,10 +334,11 @@ if seleccion == "ℹ️ Más información":
         st.markdown("""
                        #### Configuración del Modelo
                        El modelo utilizado ha sido configurado como `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
-                       - \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
-                        - \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
-                        - \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
+                       - \( p = 2 \): Se utilizan dos **términos autoregresivos** (*Auto-Regressive*), es decir, los dos valores de capturas anteriores influyen en la predicción.
+                       - \( d = 0 \): No se aplica ninguna diferenciación (*Integrated*) porque los datos son estacionarios.
+                       - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
         st.image("images/arima.png")
+        st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
     # Autor
     with tab2:
         st.subheader("👤 Autor")
