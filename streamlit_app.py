@@ -14,6 +14,7 @@ seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
 
 # Periodos de caza
 periodos_caza = {
+    'ÁNADE REAL O AZULÓN': 'No se dispone de información específica.',
     'BECADA': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente (modalidades al salto, a rabo y en mano), con un cupo máximo de 3 ejemplares por cazador y día.',
     'CABRA MONTÉS': 'Del 1 de marzo al 30 de junio y del 15 de septiembre al 15 de diciembre.',
     'CIERVO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
@@ -26,7 +27,7 @@ periodos_caza = {
     'GAMO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'JABALÍ': 'Del 1 de abril al 1er domingo de agosto y del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'LIEBRE': 'Del 12 de octubre al 4º domingo de enero (con galgo).',
-    'LOBO': 'La caza de lobo no está permitida ahora mismo en Castilla y León (ver la Sentencia del Tribunal de Justicia en el asunto C-436/22).',
+    'LOBO': 'La caza de lobo no está permitida en Castilla y León (ver la Sentencia del Tribunal de Justicia en el asunto C-436/22).',
     'MUFLÓN': 'Durante todo el año (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'OTRAS AVES ACUÁTICAS': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
     'PALOMA BRAVÍA': 'Del 25 de agosto al 3er domingo de septiembre (media veda).',
@@ -35,7 +36,7 @@ periodos_caza = {
     'PATO REAL O AZULÓN': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
     'PERDIZ ROJA': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
     'REBECO': 'Del 1 de mayo al 15 de julio y del 1 de septiembre al 15 de noviembre.',
-    'TÓRTOLA': 'La caza de tórtola no está permitida ahora mismo en Castilla y León.',
+    'TÓRTOLA': 'La caza de tórtola no está permitida en Castilla y León (ver la ORDEN FYM/811/2021 del Boletín Oficial del Estado).',
     'URRACAS,GRAJILLAS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
     'VENADO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'ZORRO': 'Durante la temporada general (media veda y cualquier caza mayor), y del 15 de agosto al 3er domingo de septiembre (media veda).',
