@@ -251,11 +251,10 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
-    st.markdown("""¿Sabías que...
-                    ...más del **80% del territorio nacional** es coto de caza?
-                    ...hay más de **800.000 cazadores** en España?
-                    ...el total económico que mueve la caza anualmente es de **4.000 millones de euros**?
-                """)
+    st.markdown("¿Sabías que..."
+    st.markfown("           ...más del **80% del territorio nacional** es coto de caza?")
+    st.markdown("           ...hay más de **800.000 cazadores** en España?")
+    st.markdown("           ...el total económico que mueve la caza anualmente es de **4.000 millones de euros**?")
     st.write("Dada la **relevancia de la caza en España**, es importante asegurar que ésta sea sostenible. De esta forma, podremos **preservar los ecosistemas** y **mantener de las poblaciones de fauna silvestre**.")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organizaciones"])
