@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 
 # Define las secciones de la app
-secciones = ["🏆 ¡Traza tu estrategia de caza sostenible!", "🎓 ¡Aprende más sobre la caza sostenible!"]
+secciones = ["🏆 ¡Traza tu estrategia de caza sostenible!", "🎓 ¡Aprende más sobre la caza sostenible!", "ℹ️ Más información"]
 
 # Selecciona la sección con un selectbox en el sidebar o en la parte superior
 seleccion = st.sidebar.selectbox("Selecciona una sección.", secciones)
@@ -188,7 +188,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         capturas = capturas.fillna(0)
         nonzero_counts = (capturas > 0).sum() 
         zero_counts = (capturas == 0).sum()
-        if nonzero_counts <= 10 or zero_counts >= 10:
+        if nonzero_counts <= 7 or zero_counts >= 7:
             st.warning(f"Información insuficiente para predecir la caza de {animal} en {provincia}.")
             continue
         # Modeling
@@ -244,13 +244,12 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
-      st.image("images/ODS.png", use_column_width=True)
+      st.image("images/ODS.png", width=300)
       
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
-    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", use_column_width=True)
+    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
     
     # Buenas prácticas y consejos
     st.subheader("✏️ Buenas prácticas")
@@ -308,7 +307,37 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.table(periodos)
     st.image("images/periodos.png", use_column_width=True)
     st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
-    
+    # ODS
+    st.write("Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
+    st.image("images/ODS.png", width=300)
+
+if seleccion == "ℹ️ Más información":
+    tab1, tab2 = st.tabs(["Modelo Predictivo", "Autor"])
+    # Modelo predictivo
+    with tab1:
+        st.header("Modelo de predicción de capturas")
+        st.markdown("""El objetivo del modelo ARIMA aplicado en este caso es predecir el número de capturas en una temporada de caza, basándonos en los datos históricos de capturas previas. En la gestión sostenible de la caza, es fundamental poder anticipar cuántas capturas se realizarán para tomar decisiones informadas que permitan mantener el equilibrio ecológico y asegurar la conservación de las especies.
+
+Este modelo ARIMA se ajusta específicamente a los datos de capturas, utilizando un enfoque que combina las características de los modelos autoregresivos (AR) y de promedio móvil (MA), pero sin necesidad de realizar diferenciaciones en la serie temporal (es decir, \( d = 0 \)). Esto indica que la serie de datos de capturas es estacionaria, y los términos autoregresivos y de promedio móvil se utilizan para modelar los valores futuros basándose en los valores pasados y los errores anteriores.
+
+#### Configuración del Modelo
+
+El modelo ARIMA utilizado tiene el siguiente formato: `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
+- \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
+- \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
+- \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.
+
+#### Ajuste del Modelo
+
+El ajuste del modelo se realiza utilizando la siguiente instrucción:""")
+    # Autor
+    with tab2:
+        st.header("Autor")
+        st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
+        st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
+        st.markdown("- **LinkedIn**: https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
+        st.write("Todos los códigos fuente pueden ser consultados en **GitHub** (https://github.com/carmenpelayo/)", unsafe_allow_html=True)
+        
     
 
 
