@@ -323,29 +323,8 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 
     with tab5:
         st.subheader("🎒 Más recursos")
-        st.markdown("- **Normativa vigente en Castilla y León**: http://medioambiente.jcyl.es/web/jcyl/MedioAmbiente/es/Plantilla100DetalleFeed/1246988359553/Normativa/1175259754359/Redaccion", unsafe_allow_html=True)
-        st.markdown("- **Guía práctica del cazador**: https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
-
-if seleccion == "ℹ️ Más información":
-    st.header("ℹ️ Más información")
-    st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
-    tab1, tab2, tab3 = st.tabs(["📈 Modelo Predictivo", "🌎 Organizaciones internacionales", "👤 Autor"])
-    # Modelo predictivo
-    with tab1:
-        st.subheader("📈 Modelo de predicción de capturas")
-        st.markdown("""El objetivo de nuestro modelo predictivo aplicado es **predecir el número de capturas en una temporada de caza**, basándonos en los datos históricos de capturas previas. 
-                       Estas previsiones permiten a los cazadores planificar sus sesiones cinegéticas de manera más efectiva, **aumentando así las probabilidades de éxito**.""")
-        st.markdown("Para esto usamos el **modelo ARIMA (Autoregressive Integrated Moving Average)**, una técnica estadística ampliamente utilizada para el análisis de series temporales.") 
-        st.markdown("""
-                       #### Configuración del Modelo
-                       El modelo utilizado ha sido configurado como `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
-                       - \( p = 2 \): Se utilizan dos **términos autoregresivos** (*Auto-Regressive*), es decir, los dos valores de capturas anteriores influyen en la predicción.
-                       - \( d = 0 \): No se aplica ninguna diferenciación (*Integrated*) porque los datos son estacionarios.
-                       - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
-        st.image("images/arima.png")
-        st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
-    # Respaldos oficiales
-    with tab2:
+        st.markdown("- [**Normativa vigente en Castilla y León**](%s)" % "http://medioambiente.jcyl.es/web/jcyl/MedioAmbiente/es/Plantilla100DetalleFeed/1246988359553/Normativa/1175259754359/Redaccion", unsafe_allow_html=True)
+        st.markdown("- [**Guía práctica del cazador**](%s)" % "https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
         respaldos = {
             "INSTITUCIÓN": [
                 "NACIONES UNIDAS (ONU)",
@@ -457,12 +436,30 @@ if seleccion == "ℹ️ Más información":
             ]
         }
         respaldos = pd.DataFrame(respaldos)
-        
-        st.subheader("🌎 Organizaciones Internacionales que apoyan la caza sostenible")
+        st.subheader("🌎 Organizaciones Internacionales")
+        st.write("Las siguientes instituciones y organizacions internacionales promueven la caza sostenible mediante la ordenanza de las siguientes normativas y códigos de práctica:")
         st.table(respaldos)
 
+if seleccion == "ℹ️ Más información":
+    st.header("ℹ️ Más información")
+    st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
+    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "👤 Autor"])
+    # Modelo predictivo
+    with tab1:
+        st.subheader("📈 Modelo de predicción de capturas")
+        st.markdown("""El objetivo de nuestro modelo predictivo aplicado es **predecir el número de capturas en una temporada de caza**, basándonos en los datos históricos de capturas previas. 
+                       Estas previsiones permiten a los cazadores planificar sus sesiones cinegéticas de manera más efectiva, **aumentando así las probabilidades de éxito**.""")
+        st.markdown("Para esto usamos el **modelo ARIMA (Autoregressive Integrated Moving Average)**, una técnica estadística ampliamente utilizada para el análisis de series temporales.") 
+        st.markdown("""
+                       #### Configuración del Modelo
+                       El modelo utilizado ha sido configurado como `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
+                       - \( p = 2 \): Se utilizan dos **términos autoregresivos** (*Auto-Regressive*), es decir, los dos valores de capturas anteriores influyen en la predicción.
+                       - \( d = 0 \): No se aplica ninguna diferenciación (*Integrated*) porque los datos son estacionarios.
+                       - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
+        st.image("images/arima.png")
+        st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
     # Autor
-    with tab3:
+    with tab2:
         st.subheader("👤 Autor")
         st.write("El presente trabajo ha sido construído por **[Carmen Pelayo Fernández](%s)**. Puedes contactarle mandando un correo a *carmenpelayofdez@gmail.com*." % "https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
         st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**" % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
