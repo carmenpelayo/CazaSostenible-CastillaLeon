@@ -467,8 +467,8 @@ if seleccion == "ℹ️ Más información":
     # Autor
     with tab3:
         st.subheader("👤 Referencia")
-        st.write("El presente recurso ha sido desarrollado por **[Carmen Pelayo Fernández](%s)**." % "https://www.linkedin.com/in/carmenpelayofernandez/" " y [Salvador Sánchez-Terán Manzanedo](%s)" % "https://www.linkedin.com/in/salvador-sánchez-terán-manzanedo-b04977180/")
-        st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**" % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
+        st.write("El presente recurso ha sido desarrollado por [Carmen Pelayo Fernández](%s)" % "https://www.linkedin.com/in/carmenpelayofernandez/", " y [Salvador Sánchez-Terán Manzanedo](%s)" % "https://www.linkedin.com/in/salvador-sánchez-terán-manzanedo-b04977180/")
+        st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**." % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
         
     
 
