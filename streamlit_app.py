@@ -257,7 +257,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.markdown("- ...*el total económico que mueve la caza anualmente es de **4.000 millones de euros***?")
     st.write("Dada la **relevancia de la caza en España**, es importante asegurar que ésta sea sostenible. De esta forma, podremos **preservar los ecosistemas** y **mantener de las poblaciones de fauna silvestre**.")
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organizaciones"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organismos"])
 
     with tab1:
         st.subheader("✏️ Buenas prácticas de caza sostenible")
@@ -437,7 +437,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
             ]
         }
         respaldos = pd.DataFrame(respaldos)
-        st.subheader("🌎 Organizaciones Internacionales")
+        st.subheader("🌎 Ordenanzas Internacionales")
         st.write("Las siguientes instituciones y organizacions internacionales **promueven la caza sostenible** mediante la ordenanza de las siguientes **normativas** y **códigos de práctica**:")
         st.table(respaldos)
 
