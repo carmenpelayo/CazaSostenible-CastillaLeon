@@ -32,7 +32,7 @@ periodos_caza = {
     'PALOMA BRAVÍA': 'Del 25 de agosto al 3er domingo de septiembre (media veda).',
     'PALOMA TORCAZ': 'Del 1 de octubre al 2º domingo de febrero.',
     'PALOMA ZURITA': 'Del 1 de octubre al 2º domingo de febrero.',
-    'PATO REAL': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
+    'PATO REAL O AZULÓN': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
     'PERDIZ ROJA': 'Desde el 4º domingo de octubre hasta el 4º domingo de enero del año siguiente.',
     'REBECO': 'Del 1 de mayo al 15 de julio y del 1 de septiembre al 15 de noviembre.',
     'TÓRTOLA': 'La caza de tórtola no está permitida ahora mismo en Castilla y León.',
