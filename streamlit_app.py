@@ -322,9 +322,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.table(modo_caza)
 
     with tab5:
-        st.subheader("🎒 Más recursos")
-        st.markdown("- [**Normativa vigente en Castilla y León**](%s)" % "http://medioambiente.jcyl.es/web/jcyl/MedioAmbiente/es/Plantilla100DetalleFeed/1246988359553/Normativa/1175259754359/Redaccion", unsafe_allow_html=True)
-        st.markdown("- [**Guía práctica del cazador**](%s)" % "https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
+        st.subheader("🌎 Organizaciones internacionales")
         respaldos = {
             "INSTITUCIÓN": [
                 "NACIONES UNIDAS (ONU)",
@@ -442,8 +440,8 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
-    st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
-    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "👤 Autor"])
+    st.write("Aquí puedes consultar más información sobre la aplicación, incluyendo una **explicación detallada del modelo de predicción** utilizado, **recursos adicionales de caza** y **links de referencia** al contacto de la desarrolladora y el código fuente.")
+    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "🎒 Más recursos", "👤 Referencia"])
     # Modelo predictivo
     with tab1:
         st.subheader("📈 Modelo de predicción de capturas")
@@ -458,9 +456,14 @@ if seleccion == "ℹ️ Más información":
                        - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
         st.image("images/arima.png")
         st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
-    # Autor
+    # Más recursos
     with tab2:
-        st.subheader("👤 Autor")
+        st.subheader("🎒 Más recursos")
+        st.markdown("- [**Normativa vigente en Castilla y León**](%s)" % "http://medioambiente.jcyl.es/web/jcyl/MedioAmbiente/es/Plantilla100DetalleFeed/1246988359553/Normativa/1175259754359/Redaccion", unsafe_allow_html=True)
+        st.markdown("- [**Guía práctica del cazador**](%s)" % "https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
+    # Autor
+    with tab3:
+        st.subheader("👤 Referencia")
         st.write("El presente trabajo ha sido construído por **[Carmen Pelayo Fernández](%s)**. Puedes contactarle mandando un correo a *carmenpelayofdez@gmail.com*." % "https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
         st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**" % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
         
