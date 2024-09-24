@@ -322,6 +322,8 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.table(modo_caza)
 
 if seleccion == "ℹ️ Más información":
+    st.header("ℹ️ Más información")
+    st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
     tab1, tab2 = st.tabs(["Modelo Predictivo", "Autor"])
     # Modelo predictivo
     with tab1:
