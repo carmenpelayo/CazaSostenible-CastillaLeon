@@ -251,9 +251,14 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
-    st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
+    st.markdown("""¿Sabías que...
+                    ...más del **80% del territorio nacional** es coto de caza?
+                    ...hay más de **800.000 cazadores** en España?
+                    ...el total económico que mueve la caza anualmente es de **4.000 millones de euros**?
+                """)
+    st.write("Dada la **relevancia de la caza en España**, es importante asegurar que ésta sea sostenible. De esta forma, podremos **preservar los ecosistemas** y **mantener de las poblaciones de fauna silvestre**.")
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organizaciones Internacionales"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organizaciones"])
 
     with tab1:
         st.subheader("✏️ Buenas prácticas de caza sostenible")
@@ -434,7 +439,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         }
         respaldos = pd.DataFrame(respaldos)
         st.subheader("🌎 Organizaciones Internacionales")
-        st.write("Las siguientes instituciones y organizacions internacionales promueven la caza sostenible mediante la ordenanza de las siguientes normativas y códigos de práctica:")
+        st.write("Las siguientes instituciones y organizacions internacionales **promueven la caza sostenible** mediante la ordenanza de las siguientes **normativas** y **códigos de práctica**:")
         st.table(respaldos)
 
 if seleccion == "ℹ️ Más información":
@@ -454,7 +459,7 @@ if seleccion == "ℹ️ Más información":
                        - \( d = 0 \): No se aplica ninguna diferenciación (*Integrated*) porque los datos son estacionarios.
                        - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
         st.image("images/arima.png")
-        st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
+        st.markdown("Aplicando esta fórmula, podemos **estimar la cantidad de capturas *Yt* en la siguiente temporada** de caza, basándonos en el **patrón de capturas históricas** del animal y provincia seleccionados.") 
     # Más recursos
     with tab2:
         st.subheader("🎒 Más recursos")
