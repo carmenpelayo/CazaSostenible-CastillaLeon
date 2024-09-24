@@ -459,7 +459,7 @@ if seleccion == "ℹ️ Más información":
         respaldos = pd.DataFrame(respaldos)
         
         st.subheader("🌎 Organizaciones Internacionales que apoyan la caza sostenible")
-        st.table(df)
+        st.table(respaldos)
 
     # Autor
     with tab3:
