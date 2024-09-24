@@ -73,6 +73,7 @@ descripciones = {
     "ZORRO": "El zorro es un depredador versátil, conocido por su astucia y adaptación a diversos entornos.",
     "ZORZAL": "El zorzal es un ave migratoria que se alimenta de insectos y frutos, migrando grandes distancias."
 }
+descripciones = pd.DataFrame.from_dict(descripciones, orient='index', columns=['Descripción del animal'])
 
 modo_caza = {
     "ÁNADE REAL O AZULÓN": "Se caza en humedales o ríos mediante puestos fijos o al vuelo.",
@@ -103,6 +104,7 @@ modo_caza = {
     "ZORRO": "Se caza en batidas, aguardos o al salto, a menudo en zonas donde causa daños.",
     "ZORZAL": "Se caza en pasos migratorios desde puestos fijos o al vuelo en zonas de olivares."
 }
+modo_caza = pd.DataFrame.from_dict(modo_caza, orient='index', columns=['Método de captura'])
 
 # Sección de Caza Responsable
 if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
@@ -251,7 +253,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
 
-    tab1, tab2, tab3, tab4 = st.tabs(["✏️ Buenas prácticas", "Descripción de animales", "📆 Períodos de caza", "Métodos de caza"])
+    tab1, tab2, tab3, tab4 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza"])
 
     with tab1:
         st.subheader("✏️ Buenas prácticas de caza sostenible")
@@ -303,7 +305,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 
     # Descripciones de animales
     with tab2:
-        st.subheader("Descripción de animales")
+        st.subheader("🐗 Descripción de animales")
         st.table(descripciones)
     
     # Periodos de caza
@@ -316,7 +318,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 
     # Métodos de caza
     with tab4:
-        st.subheader("Métodos de caza")
+        st.subheader("🎯 Métodos de caza")
         st.table(modo_caza)
 
 if seleccion == "ℹ️ Más información":
