@@ -250,66 +250,74 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
-    
-    # Buenas prácticas y consejos
-    st.subheader("✏️ Buenas prácticas")
-    st.write("La caza sostenible no sólo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
-    
-    # Consejos detallados
-    consejos = {
-        "Respetar los periodos de caza": (
-            "Conocer y seguir las fechas legales para cada especie es fundamental para asegurar su conservación. "
-            "Los periodos de caza están diseñados para proteger las especies durante su época de reproducción, "
-            "por lo que es crucial respetarlos para mantener el equilibrio ecológico."
-        ),
-        "Licencias y permisos": (
-            "Asegúrate de contar con la licencia de caza actualizada y de cumplir con los requisitos específicos "
-            "para la especie que planeas cazar. Las licencias no solo son un requisito legal, sino que también "
-            "garantizan que los cazadores están informados sobre las regulaciones vigentes y las buenas prácticas."
-        ),
-        "Evitar la sobrecaza": (
-            "Respeta los cupos de captura establecidos y mantente informado sobre el estado de conservación de las especies. "
-            "La sobrecaza puede llevar a la extinción local de especies y a desequilibrios en los ecosistemas."
-        ),
-        "Uso adecuado del equipamiento": (
-            "Utiliza armas y munición adecuadas para cada especie, y asegúrate de realizar un disparo limpio y ético. "
-            "Conocer tu equipo y tener la habilidad necesaria para usarlo de manera responsable es clave para "
-            "minimizar el sufrimiento del animal."
-        ),
-        "Recuperación de las piezas": (
-            "Siempre intenta recuperar la pieza cazada. No dejar restos en el campo es importante para el bienestar "
-            "de otros animales y para la salud del ecosistema."
-        ),
-        "Conservación del hábitat": (
-            "Minimiza el impacto ambiental durante la caza cuidando la flora y fauna local. Evita dañar áreas sensibles "
-            "y sigue prácticas que protejan los hábitats naturales."
-        ),
-        "Recoge tus residuos": (
-            "No dejes basura en la naturaleza, incluyendo cartuchos de munición y cualquier otro tipo de residuos. "
-            "La limpieza del entorno es responsabilidad de cada cazador y contribuye a la salud del ecosistema."
-        ),
-        "Educación y formación continua": (
-            "Participa en talleres, seminarios y cursos sobre caza sostenible y conservación de la naturaleza. "
-            "La educación es clave para estar al tanto de las mejores prácticas y nuevas regulaciones."
-        ),
-        "Informar a otros cazadores": (
-            "Comparte tus conocimientos y experiencias con otros cazadores. La comunicación y la sensibilización son "
-            "fundamentales para fomentar una cultura de caza responsable."
-        )
-    }
 
-    for consejo, descripcion in consejos.items():
-        st.write(f"- **{consejo}**: {descripcion}")
+    tab1, tab2, tab3, tab4 = st.tabs(["✏️ Buenas prácticas", "Descripción de animales", "📆 Períodos de caza", "Métodos de caza"])
 
+    with tab1:
+        st.subheader("✏️ Buenas prácticas de caza sostenible")
+        st.write("La caza sostenible no sólo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
+        consejos = {
+            "Respetar los periodos de caza": (
+                "Conocer y seguir las fechas legales para cada especie es fundamental para asegurar su conservación. "
+                "Los periodos de caza están diseñados para proteger las especies durante su época de reproducción, "
+                "por lo que es crucial respetarlos para mantener el equilibrio ecológico."
+            ),
+            "Licencias y permisos": (
+                "Asegúrate de contar con la licencia de caza actualizada y de cumplir con los requisitos específicos "
+                "para la especie que planeas cazar. Las licencias no solo son un requisito legal, sino que también "
+                "garantizan que los cazadores están informados sobre las regulaciones vigentes y las buenas prácticas."
+            ),
+            "Evitar la sobrecaza": (
+                "Respeta los cupos de captura establecidos y mantente informado sobre el estado de conservación de las especies. "
+                "La sobrecaza puede llevar a la extinción local de especies y a desequilibrios en los ecosistemas."
+            ),
+            "Uso adecuado del equipamiento": (
+                "Utiliza armas y munición adecuadas para cada especie, y asegúrate de realizar un disparo limpio y ético. "
+                "Conocer tu equipo y tener la habilidad necesaria para usarlo de manera responsable es clave para "
+                "minimizar el sufrimiento del animal."
+            ),
+            "Recuperación de las piezas": (
+                "Siempre intenta recuperar la pieza cazada. No dejar restos en el campo es importante para el bienestar "
+                "de otros animales y para la salud del ecosistema."
+            ),
+            "Conservación del hábitat": (
+                "Minimiza el impacto ambiental durante la caza cuidando la flora y fauna local. Evita dañar áreas sensibles "
+                "y sigue prácticas que protejan los hábitats naturales."
+            ),
+            "Recoge tus residuos": (
+                "No dejes basura en la naturaleza, incluyendo cartuchos de munición y cualquier otro tipo de residuos. "
+                "La limpieza del entorno es responsabilidad de cada cazador y contribuye a la salud del ecosistema."
+            ),
+            "Educación y formación continua": (
+                "Participa en talleres, seminarios y cursos sobre caza sostenible y conservación de la naturaleza. "
+                "La educación es clave para estar al tanto de las mejores prácticas y nuevas regulaciones."
+            ),
+            "Informar a otros cazadores": (
+                "Comparte tus conocimientos y experiencias con otros cazadores. La comunicación y la sensibilización son "
+                "fundamentales para fomentar una cultura de caza responsable."
+            )
+        }
+    
+        for consejo, descripcion in consejos.items():
+            st.write(f"- **{consejo}**: {descripcion}")
+
+    # Descripciones de animales
+    with tab2:
+        st.subheader("Descripción de animales")
+        st.table(descripciones)
+    
     # Periodos de caza
-    st.subheader("📆 Períodos de caza legal en Castilla y León")
-    st.write("Limitando tus sesiones de caza a los periodos permitidos, estás **respetando el ciclo natural de reproducción de los animales**, contribuyendo así a la **conservación de la biodiversidad en Castilla y León**.")
-    st.table(periodos)
-    st.image("images/periodos.png", use_column_width=True)
-    st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
-    # ODS
-    st.write("Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", width=300)
+    with tab3:
+        st.subheader("📆 Períodos de caza legal en Castilla y León")
+        st.write("Limitando tus sesiones de caza a los periodos permitidos, estás **respetando el ciclo natural de reproducción de los animales**, contribuyendo así a la **conservación de la biodiversidad en Castilla y León**.")
+        st.table(periodos)
+        st.image("images/periodos.png", use_column_width=True)
+        st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
+
+    # Métodos de caza
+    with tab4:
+        st.subheader("Métodos de caza")
+        st.table(modo_caza)
 
 if seleccion == "ℹ️ Más información":
     tab1, tab2 = st.tabs(["Modelo Predictivo", "Autor"])
