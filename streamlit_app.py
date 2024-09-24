@@ -327,28 +327,32 @@ if seleccion == "ℹ️ Más información":
     tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "👤 Autor"])
     # Modelo predictivo
     with tab1:
-        st.header("📈 Modelo de predicción de capturas")
-        st.markdown("""El objetivo del modelo ARIMA aplicado en este caso es predecir el número de capturas en una temporada de caza, basándonos en los datos históricos de capturas previas. En la gestión sostenible de la caza, es fundamental poder anticipar cuántas capturas se realizarán para tomar decisiones informadas que permitan mantener el equilibrio ecológico y asegurar la conservación de las especies.
-
-Este modelo ARIMA se ajusta específicamente a los datos de capturas, utilizando un enfoque que combina las características de los modelos autoregresivos (AR) y de promedio móvil (MA), pero sin necesidad de realizar diferenciaciones en la serie temporal (es decir, \( d = 0 \)). Esto indica que la serie de datos de capturas es estacionaria, y los términos autoregresivos y de promedio móvil se utilizan para modelar los valores futuros basándose en los valores pasados y los errores anteriores.
-
-#### Configuración del Modelo
-
-El modelo ARIMA utilizado tiene el siguiente formato: `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
-- \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
-- \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
-- \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.
-
-#### Ajuste del Modelo
-
-El ajuste del modelo se realiza utilizando la siguiente instrucción:""")
+        st.subheader("📈 Modelo de predicción de capturas")
+        st.markdown("""El objetivo de nuestro modelo predictivo aplicado es **predecir el número de capturas en una temporada de caza**, basándonos en los datos históricos de capturas previas. 
+                       Estas previsiones permiten a los cazadores planificar sus sesiones cinegéticas de manera más efectiva, **aumentando así las probabilidades de éxito**.
+                       Para ello usamos el **modelo ARIMA (Autoregressive Integrated Moving Average)**, una técnica estadística ampliamente utilizada para el análisis de series temporales. 
+                    
+                    #### Configuración del Modelo
+                    El modelo utilizado ha sido configurado como `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
+                    - \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
+                    \[AR(p): Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \ldots + \phi_p Y_{t-p} + \epsilon_t\]
+                       Donde:
+                       - \( Y_t \) es el valor en el tiempo \( t \).
+                       - \( \phi_i \) son los coeficientes del modelo.
+                       - \( p \) es el número de rezagos.
+                       - \( \epsilon_t \) es el término de error.
+                    - \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
+                    - \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.
+                    
+                    #### Ajuste del Modelo
+                    El ajuste del modelo se realiza utilizando la siguiente instrucción:""")
     # Autor
     with tab2:
-        st.header("👤 Autor")
+        st.subheader("👤 Autor")
         st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
         st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
         st.markdown("- **LinkedIn**: https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
-        st.write("Todos los códigos fuente pueden ser consultados en **GitHub** (https://github.com/carmenpelayo/)", unsafe_allow_html=True)
+        st.write("Todos los códigos fuente pueden ser consultados en **GitHub** (https://github.com/carmenpelayo/).", unsafe_allow_html=True)
         
     
 
