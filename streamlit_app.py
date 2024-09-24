@@ -337,7 +337,7 @@ if seleccion == "ℹ️ Más información":
                        - \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
                         - \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
                         - \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
-        st.image("images/arima.png", width=300)
+        st.image("images/arima.png")
     # Autor
     with tab2:
         st.subheader("👤 Autor")
