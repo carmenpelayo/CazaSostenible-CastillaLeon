@@ -331,14 +331,13 @@ if seleccion == "ℹ️ Más información":
         st.markdown("""El objetivo de nuestro modelo predictivo aplicado es **predecir el número de capturas en una temporada de caza**, basándonos en los datos históricos de capturas previas. 
                        Estas previsiones permiten a los cazadores planificar sus sesiones cinegéticas de manera más efectiva, **aumentando así las probabilidades de éxito**.""")
         st.markdown("Para esto usamos el **modelo ARIMA (Autoregressive Integrated Moving Average)**, una técnica estadística ampliamente utilizada para el análisis de series temporales.") 
-        st.markdown("""#### Configuración del Modelo
+        st.markdown("""
+                       #### Configuración del Modelo
                        El modelo utilizado ha sido configurado como `ARIMA(capturas, order=(2,0,2))`. Esto indica que:
                        - \( p = 2 \): Se utilizan dos términos autoregresivos, es decir, los dos valores de capturas anteriores influyen en la predicción.
                         - \( d = 0 \): No se aplica ninguna diferenciación porque los datos son estacionarios.
-                        - \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.
-                        
-                        #### Ajuste del Modelo
-                        El ajuste del modelo se realiza utilizando la siguiente instrucción:""")
+                        - \( q = 2 \): Se utilizan dos términos de promedio móvil, lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
+        st.image("images/arima.png", width=300)
     # Autor
     with tab2:
         st.subheader("👤 Autor")
