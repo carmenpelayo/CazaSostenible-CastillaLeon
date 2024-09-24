@@ -141,41 +141,35 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.markdown("---")
       st.subheader(animal)
       if animal == "CABRA MONTÉS":
-        image_path = "images/CABRA_MONTES.jpg"
-      elif animal == "CORNEJAS":
-        image_path = "images/CORNEJAS.png"
+        image_path = "images/CABRA_MONTES.png"
       elif animal == "CÓRVIDOS":
         image_path = "images/CORVIDOS.png"
-      elif animal == "CORZO":
-        image_path = "images/CORZO.png"
       elif animal == "FAISÁN":
-        image_path = "images/FAISAN.jpg"
+        image_path = "images/FAISAN.png"
       elif animal == "JABALÍ":
         image_path = "images/JABALI.png"
-      elif animal == "LOBO":
-        image_path = "images/LOBO.png"
       elif animal == "MUFLÓN":
-        image_path = "images/MUFLON.jpg"
+        image_path = "images/MUFLON.png"
       elif animal == "OTRAS AVES ACUÁTICAS":
         image_path = "images/OTRAS-AVES-ACUATICAS.jpg"
       elif animal == "PALOMA BRAVÍA":
-        image_path = "images/PALOMA_BRAVIA.jpg"
+        image_path = "images/PALOMA_BRAVIA.png"
       elif animal == "PALOMA TORCAZ":
-        image_path = "images/PALOMA_TORCAZ.jpg"
+        image_path = "images/PALOMA_TORCAZ.png"
       elif animal == "PALOMA ZURITA":
-        image_path = "images/PALOMA_ZURITA.jpg"
+        image_path = "images/PALOMA_ZURITA.png"
       elif animal == "PATO REAL O AZULÓN":
-        image_path = "images/PATO_REAL_O_AZULON.jpg"
+        image_path = "images/PATO_REAL_O_AZULON.png"
       elif animal == "PERDIZ ROJA":
-        image_path = "images/PERDIZ_ROJA.jpg"
+        image_path = "images/PERDIZ_ROJA.png"
       elif animal == "TÓRTOLA":
-        image_path = "images/TORTOLA.jpg"
+        image_path = "images/TORTOLA.png"
       elif animal == "URRACAS,GRAJILLAS":
         image_path = "images/URRACAS_GRAJILLAS.jpg"
       elif animal == "ÁNADE REAL O AZULÓN":
-        image_path = "images/ANADE_REAL_O_AZULON.jpg"
+        image_path = "images/ANADE_REAL_O_AZULON.png"
       else:
-        image_path = "images/" + animal + ".jpg"
+        image_path = "images/" + animal + ".png"
       st.image(image_path, use_column_width=True)
 
       st.write("✏️ **Descripción**: ", descripciones[animal])
