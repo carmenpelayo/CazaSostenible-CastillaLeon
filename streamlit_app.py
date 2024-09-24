@@ -67,7 +67,7 @@ descripciones = {
     "PERDIZ ROJA": "La perdiz roja es una especie emblemática en España, conocida por su resistencia y comportamiento gregario.",
     "REBECO": "El rebeco es un animal ágil de alta montaña, con cuernos curvados característicos.",
     "TÓRTOLA": "La tórtola es un ave migratoria cuyo canto melódico es característico del verano.",
-    "URRACAS, GRAJILLAS": "Las urracas y grajillas son córvidos conocidos por su habilidad para sobrevivir en entornos cambiantes.",
+    "URRACAS,GRAJILLAS": "Las urracas y grajillas son córvidos conocidos por su habilidad para sobrevivir en entornos cambiantes.",
     "VENADO":"El venado, también conocido como ciervo, es una especie majestuosa que habita en bosques y praderas.",
     "ZORRO": "El zorro es un depredador versátil, conocido por su astucia y adaptación a diversos entornos.",
     "ZORZAL": "El zorzal es un ave migratoria que se alimenta de insectos y frutos, migrando grandes distancias."
