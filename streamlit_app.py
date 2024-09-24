@@ -306,6 +306,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.subheader("📆 Períodos de caza legal en Castilla y León")
     st.write("Limitando tus sesiones de caza a los periodos permitidos, estás **respetando el ciclo natural de reproducción de los animales**, contribuyendo así a la **conservación de la biodiversidad en Castilla y León**.")
     st.table(periodos)
+    st.image("images/periodos.png", use_column_width=True)
     st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
     
     
