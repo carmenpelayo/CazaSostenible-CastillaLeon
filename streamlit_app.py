@@ -234,7 +234,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         st.write("⭐ Para **maximizar tus probabilidades de éxito**, te recomendamos que caces...")
         resultados = pd.DataFrame(resultados)
         resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]] = resultados[["Previsión de caza mínima", "Previsión de caza media", "Previsión de caza máxima"]].astype(int)
-        resultados = resultados.sort_values(by=['Previsión de caza media'], ascending=False)
+        resultados = resultados.fillna(0).sort_values(by=['Previsión de caza media'], ascending=False)
         return st.table(resultados)
   
   # RESULTADOS
