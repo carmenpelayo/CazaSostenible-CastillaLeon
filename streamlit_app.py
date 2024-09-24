@@ -40,7 +40,7 @@ periodos_caza = {
     'URRACAS,GRAJILLAS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
     'VENADO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'ZORRO': 'Durante la temporada general (media veda y cualquier caza mayor), y del 15 de agosto al 3er domingo de septiembre (media veda).',
-    'ZORZALES': 'Del 1 de octubre al 2º domingo de febrero.'
+    'ZORZAL': 'Del 1 de octubre al 2º domingo de febrero.'
 }
 periodos = pd.DataFrame.from_dict(periodos_caza, orient='index', columns=['Período de caza legal'])
 
