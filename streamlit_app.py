@@ -467,7 +467,7 @@ if seleccion == "ℹ️ Más información":
         st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
         st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
         st.markdown("- **LinkedIn**: https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
-        st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%https://github.com/carmenpelayo/)**.", unsafe_allow_html=True)
+        st.write("Todos los códigos fuente pueden ser consultados en [GitHub](%s)" % "https://github.com/carmenpelayo/", unsafe_allow_html=True)
         
     
 
