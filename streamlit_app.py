@@ -248,7 +248,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", use_column_width="auto)
+    st.image("images/ODS.png", use_column_width="auto")
     
     # Buenas prácticas y consejos
     st.subheader("✏️ Buenas prácticas")
