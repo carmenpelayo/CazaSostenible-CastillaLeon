@@ -253,11 +253,11 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
 
-    tab1, tab2, tab3, tab4 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🎒 Más recursos"])
 
     with tab1:
         st.subheader("✏️ Buenas prácticas de caza sostenible")
-        st.write("La caza sostenible no sólo implica seguir las normativas, sino también adoptar prácticas que promuevan la sostenibilidad y la conservación del medio ambiente. A continuación, se presentan recomendaciones detalladas para llevar a cabo una caza ética y consciente:")
+        st.write("La caza sostenible no sólo implica seguir las normativas, sino también adoptar prácticas que promuevan la conservación del medio ambiente. A continuación, se presentan algunas recomendaciones:")
         consejos = {
             "Respetar los periodos de caza": (
                 "Conocer y seguir las fechas legales para cada especie es fundamental para asegurar su conservación. "
@@ -321,10 +321,15 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.subheader("🎯 Métodos de caza")
         st.table(modo_caza)
 
+    with tab5:
+        st.subheader("🎒 Más recursos")
+        st.markdown("- **Normativa vigente en Castilla y León**: http://medioambiente.jcyl.es/web/jcyl/MedioAmbiente/es/Plantilla100DetalleFeed/1246988359553/Normativa/1175259754359/Redaccion", unsafe_allow_html=True)
+        st.markdown("- **Guía práctica del cazador**: https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
+
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
     st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
-    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "👤 Autor"])
+    tab1, tab2, tab3 = st.tabs(["📈 Modelo Predictivo", "🌎 Organizaciones internacionales", "👤 Autor"])
     # Modelo predictivo
     with tab1:
         st.subheader("📈 Modelo de predicción de capturas")
@@ -339,8 +344,119 @@ if seleccion == "ℹ️ Más información":
                        - \( q = 2 \): Se utilizan dos términos de **promedio móvil** (*Moving-Average*), lo que significa que los errores de predicción de los dos periodos anteriores también se tienen en cuenta.""")
         st.image("images/arima.png")
         st.markdown("Aplicando esta fórmula, podemos estimar la cantidad de capturas *Yt* en la siguiente temporada de caza, basándonos en el patrón de capturas históricas del animal y provincia seleccionados.") 
-    # Autor
+    # Respaldos oficiales
     with tab2:
+        respaldos = {
+            "INSTITUCIÓN": [
+                "NACIONES UNIDAS (ONU)",
+                "NACIONES UNIDAS (ONU)",
+                "NACIONES UNIDAS (ONU)",
+                "NACIONES UNIDAS (ONU)",
+                "NACIONES UNIDAS (ONU)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA (UICN)",
+                "CONSEJO DE EUROPA (COE)",
+                "CONSEJO DE EUROPA (COE)",
+                "CONSEJO DE EUROPA (COE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "UNIÓN EUROPEA (UE)",
+                "EUROPEAN LANDOWNER ORGANIZATION (ELO)",
+                "EUROPEAN LANDOWNER ORGANIZATION (ELO)",
+                "AGENCIA FEDERAL DE MEDIOAMBIENTE DE AUSTRIA",
+                "AGENCIA FEDERAL DE MEDIOAMBIENTE DE AUSTRIA",
+                "AGENCIA FEDERAL DE MEDIOAMBIENTE DE AUSTRIA",
+                "BIRDLIFE INTERNATIONAL",
+                "CONSEJO INTERNACIONAL DE LA CAZA Y CONSERVACIÓN DE LA FAUNA (CIC)",
+                "CONSEJO INTERNACIONAL DE LA CAZA Y CONSERVACIÓN DE LA FAUNA (CIC)",
+                "CONSEJO INTERNACIONAL DE LA CAZA Y CONSERVACIÓN DE LA FAUNA (CIC)"
+            ],
+            "AÑO": [
+                1987,
+                1992,
+                2000,
+                2004,
+                None,
+                1980,
+                2000,
+                2004,
+                2006,
+                2008,
+                2012,
+                1979,
+                2004,
+                2007,
+                1979,
+                2001,
+                2004,
+                2004,
+                2008,
+                2001,
+                2006,
+                2009,
+                1992,
+                2008,
+                2009,
+                2006,
+                2008,
+                None,
+                2006,
+                2008,
+                2009,
+                2011
+            ],
+            "INSTRUMENTO": [
+                "Informe Brundtland",
+                "Convenio sobre Diversidad Biológica (CDB)",
+                "CDB: Enfoque por Ecosistemas",
+                "CDB: Principios y Directrices de Addis Abeba",
+                None,
+                "Estrategia Mundial para la Conservación",
+                "Resolución 2.29 del II Congreso Mundial de la UICN: Declaración de la política de la UICN acerca del uso sostenible de los recursos vivos silvestres (Declaración de Amman)",
+                "Resolución 3.093 del III Congreso Mundial de la UICN: Aplicación de la política de la UICN sobre el uso consuntivo de la fauna silvestre y la caza recreativa en África meridional",
+                "Directrices de Caza Sostenible en Europa",
+                "Resolución 4.026 del IV Congreso Mundial de la UICN: Fomento de la confianza para la conservación de la biodiversidad y la utilización sostenible en consonancia con la Carta Europea sobre Caza y Biodiversidad",
+                "Directrices de la Comisión de Supervivencia de Especies (CSE) de la UICN sobre la caza de trofeos como instrumento para crear incentivos para la conservación",
+                "Convenio de Berna",
+                "Recomendación PACE 1689 La caza y el equilibrio ambiental de Europa",
+                "Carta Europea sobre Caza y Biodiversidad",
+                "Directiva Aves",
+                "Directiva Aves: Iniciativa Caza Sostenible (Sustainable Hunting Initiative, SHI)",
+                "Directiva Aves: Acuerdo sobre Caza Sostenible entre FACE y BirdLife Internacional",
+                "Directiva Aves: Guía sobre la caza en virtud de la Directiva Aves",
+                "Directiva Aves: Guía para la caza sostenible de las aves silvestres",
+                "Estrategia de la Unión Europea para el Desarrollo Sostenible",
+                "Directiva Hábitats",
+                "Directiva Hábitats: Iniciativa Caza y Pesca Sostenible (Sustainable Hunting and Angling Initiative, SHAI)",
+                "Directiva Hábitats: Conferencia “Promoción de Natura 2000 y el Uso Sostenible de la Fauna” (Promoting Natura 2000 & Sustainable Wildlife Use)",
+                "Red Natura 2000: Proyecto “Fomento de la Red Natura 2000 entre sus usuarios, en particular los cazadores”",
+                "Proyecto “Hunting for Sustainability”",
+                "Pilot Wildlife Estates initiative (PWEi)",
+                "Iniciativa Cotos Faunísticos (Wildlife Estates initiative, WEi)",
+                "Reunión de trabajo “Caza y Sostenibilidad” del cual deriva el documento “Fundamentos de Criterios e Indicadores de Caza Sostenible”",
+                "Criterios e Indicadores de Caza Sostenible",
+                "Caza Sostenible. Principios, Criterios e Indicadores",
+                "Proyecto Caza Sostenible: Directrices para avanzar hacia la caza sostenible de aves migratorias en el Mediterráneo",
+                "Programa “Turismo de caza sostenible” (incluye el libro “Buenas prácticas en caza sostenible”)",
+                "Estudio (junto con FAO): “Principios para el Desarrollo Sostenible de Leyes de Gestión de Fauna)",
+                "Fauna y Cría Comercial de Animales Anteriormente Silvestres"
+            ]
+        }
+        respaldos = pd.DataFrame(respaldos)
+        
+        st.subheader("🌎 Organizaciones Internacionales que apoyan la caza sostenible")
+        st.table(df)
+
+    # Autor
+    with tab3:
         st.subheader("👤 Autor")
         st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
         st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
