@@ -168,6 +168,10 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/URRACAS_GRAJILLAS.jpg"
       elif animal == "ÁNADE REAL O AZULÓN":
         image_path = "images/ANADE_REAL_O_AZULON.png"
+      elif animal == "ZORRO":
+        image_path = "images/ZORRO.jpg"
+      elif animal == "ZORZAL":
+        image_path = "images/ZORZAL.gif"
       else:
         image_path = "images/" + animal + ".png"
       st.image(image_path, use_column_width=True)
