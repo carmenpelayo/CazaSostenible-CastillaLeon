@@ -322,7 +322,6 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.table(modo_caza)
 
     with tab5:
-        st.subheader("🌎 Organizaciones internacionales")
         respaldos = {
             "INSTITUCIÓN": [
                 "NACIONES UNIDAS (ONU)",
@@ -441,7 +440,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
     st.write("Aquí puedes consultar más información sobre la aplicación, incluyendo una **explicación detallada del modelo de predicción** utilizado, **recursos adicionales de caza** y **links de referencia** al contacto de la desarrolladora y el código fuente.")
-    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "🎒 Más recursos", "👤 Referencia"])
+    tab1, tab2, tab3 = st.tabs(["📈 Modelo Predictivo", "🎒 Más recursos", "👤 Referencia"])
     # Modelo predictivo
     with tab1:
         st.subheader("📈 Modelo de predicción de capturas")
