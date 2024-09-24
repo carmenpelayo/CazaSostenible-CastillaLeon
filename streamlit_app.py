@@ -19,7 +19,7 @@ periodos_caza = {
     'CIERVO': 'Del 1er domingo de septiembre al 4º sábado de septiembre (rececho y aguardo/espera), y del 4º domingo de septiembre al 4º domingo de febrero (todas las modalidades).',
     'CODORNIZ': 'Del 15 de agosto al 3er domingo de septiembre, con un cupo máximo de 20 ejemplares por cazador y día.',
     'CONEJO': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
-    'CORNEJA': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
+    'CORNEJAS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
     'CÓRVIDOS': 'Del 15 de agosto al 3er domingo de septiembre (media veda).',
     'CORZO': 'Ambos sexos: del 1 de abril al 1er domingo de agosto, y del 1 de septiembre al 2º domingo de octubre. Sólo hembras: del 1 de enero al 4º domingo de febrero.',
     'FAISÁN': 'Del 4º domingo de octubre al 4º domingo de enero del año siguiente.',
@@ -172,7 +172,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/ANADE_REAL_O_AZULON.jpg"
       else:
         image_path = "images/" + animal + ".jpg"
-      st.image(image_path, use_column_width="auto")
+      st.image(image_path, use_column_width=True)
 
       st.write("✏️ **Descripción**: ", descripciones[animal])
       st.write("🎯 **Cómo cazar**: ", modo_caza[animal])
@@ -242,13 +242,13 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
-      st.image("images/ODS.png", use_column_width="auto")
+      st.image("images/ODS.png", use_column_width=True)
       
 # Sección de Caza Responsable
 if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**. Esto está en línea con el Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los Objetivos de Desarrollo Sostenible de las Naciones Unidas.")
-    st.image("images/ODS.png", use_column_width="auto")
+    st.image("images/ODS.png", use_column_width=True)
     
     # Buenas prácticas y consejos
     st.subheader("✏️ Buenas prácticas")
