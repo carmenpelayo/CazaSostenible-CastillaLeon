@@ -464,9 +464,7 @@ if seleccion == "ℹ️ Más información":
     # Autor
     with tab3:
         st.subheader("👤 Autor")
-        st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
-        st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
-        st.markdown("- **[LinkedIn](%s)**." % "https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
+        st.write("El presente trabajo ha sido construído por **[Carmen Pelayo Fernández](%s)**. Puedes contactarle mandando un correo a *carmenpelayofdez@gmail.com*." % "https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
         st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**" % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
         
     
