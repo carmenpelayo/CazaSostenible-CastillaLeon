@@ -89,6 +89,7 @@ modo_caza = {
     "LIEBRE": "Se caza al salto con perros de rastro o de carrera (galgos) en llanuras o campos abiertos.",
     "LOBO": "Se caza mediante aguardos, rececho o batida en terrenos montañosos o boscosos.",
     "MUFLÓN": "Se caza en rececho, sobre todo en zonas montañosas o de difícil acceso.",
+    "OTRAS AVES ACUÁTICAS": "Depende del ave específico.",
     "PALOMA BRAVÍA": "Se caza en puestos fijos, a menudo con cimbeles o desde escondites estratégicos.",
     "PALOMA TORCAZ": "Se caza en pasos migratorios desde puestos fijos o al vuelo.",
     "PALOMA ZURITA": "Similar a la torcaz, se caza al vuelo en pasos migratorios o en cercanías de cultivos.",
