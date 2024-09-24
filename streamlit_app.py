@@ -324,10 +324,10 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
     st.write("Aquí puedes consultar más información sobre el recurso, incluyendo una **explicación detallada del modelo de predicción** utilizado, así como **links de contacto** con la autora y el código fuente.")
-    tab1, tab2 = st.tabs(["Modelo Predictivo", "Autor"])
+    tab1, tab2 = st.tabs(["📈 Modelo Predictivo", "👤 Autor"])
     # Modelo predictivo
     with tab1:
-        st.header("Modelo de predicción de capturas")
+        st.header("📈 Modelo de predicción de capturas")
         st.markdown("""El objetivo del modelo ARIMA aplicado en este caso es predecir el número de capturas en una temporada de caza, basándonos en los datos históricos de capturas previas. En la gestión sostenible de la caza, es fundamental poder anticipar cuántas capturas se realizarán para tomar decisiones informadas que permitan mantener el equilibrio ecológico y asegurar la conservación de las especies.
 
 Este modelo ARIMA se ajusta específicamente a los datos de capturas, utilizando un enfoque que combina las características de los modelos autoregresivos (AR) y de promedio móvil (MA), pero sin necesidad de realizar diferenciaciones en la serie temporal (es decir, \( d = 0 \)). Esto indica que la serie de datos de capturas es estacionaria, y los términos autoregresivos y de promedio móvil se utilizan para modelar los valores futuros basándose en los valores pasados y los errores anteriores.
@@ -344,7 +344,7 @@ El modelo ARIMA utilizado tiene el siguiente formato: `ARIMA(capturas, order=(2,
 El ajuste del modelo se realiza utilizando la siguiente instrucción:""")
     # Autor
     with tab2:
-        st.header("Autor")
+        st.header("👤 Autor")
         st.write("El presente trabajo ha sido construído por **Carmen Pelayo Fernández**.")
         st.markdown("- **E-Mail**: carmenpelayofdez@gmail.com")
         st.markdown("- **LinkedIn**: https://www.linkedin.com/in/carmenpelayofernandez/", unsafe_allow_html=True)
