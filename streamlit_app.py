@@ -253,7 +253,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
     st.title("¡Aprende más sobre la caza sostenible!")
     st.write("La caza sostenible es esencial para la **preservación de los ecosistemas** y el **mantenimiento de las poblaciones de fauna silvestre**.")
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🎒 Más recursos"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["✏️ Buenas prácticas", "🐗 Descripción de animales", "📆 Períodos de caza", "🎯 Métodos de caza", "🌎 Organizaciones Internacionales"])
 
     with tab1:
         st.subheader("✏️ Buenas prácticas de caza sostenible")
