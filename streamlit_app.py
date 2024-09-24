@@ -167,7 +167,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       elif animal == "TÓRTOLA":
         image_path = "images/TORTOLA.png"
       elif animal == "URRACAS,GRAJILLAS":
-        image_path = "images/URRACAS_GRAJILLAS.jpg"
+        image_path = "images/URRACAS_GRAJILLAS.png"
       elif animal == "ÁNADE REAL O AZULÓN":
         image_path = "images/ANADE_REAL_O_AZULON.png"
       elif animal == "ZORZAL":
