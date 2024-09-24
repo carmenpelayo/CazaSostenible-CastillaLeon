@@ -144,6 +144,8 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/CABRA_MONTES.png"
       elif animal == "CÓRVIDOS":
         image_path = "images/CORVIDOS.png"
+      elif animal == "CORZO":
+        image_path = "images/CORZO.gif"
       elif animal == "FAISÁN":
         image_path = "images/FAISAN.png"
       elif animal == "JABALÍ":
@@ -168,8 +170,6 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
         image_path = "images/URRACAS_GRAJILLAS.jpg"
       elif animal == "ÁNADE REAL O AZULÓN":
         image_path = "images/ANADE_REAL_O_AZULON.png"
-      elif animal == "ZORRO":
-        image_path = "images/ZORRO.jpg"
       elif animal == "ZORZAL":
         image_path = "images/ZORZAL.gif"
       else:
