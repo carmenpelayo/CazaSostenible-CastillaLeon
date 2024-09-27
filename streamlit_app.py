@@ -243,7 +243,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.balloons()
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
-      st.write("¡Asegúrate de cazar estos animales únicamente **durante los periodos permitidos**!)
+      st.write("¡Asegúrate de cazar estos animales únicamente **durante los periodos permitidos**!")
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
       st.image("images/ODS.png", width=300)
       
