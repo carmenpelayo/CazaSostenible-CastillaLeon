@@ -439,7 +439,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.subheader("🌎 Ordenanzas Internacionales")
         st.write("Las siguientes instituciones y organizacions internacionales **promueven la caza sostenible** mediante la ordenanza de las siguientes **normativas** y **códigos de práctica**:")
         st.table(respaldos)
-        st.write("Fuente: **Fundación Caza Sostenible(%s)**." % " (https://www.fundacioncazasostenible.org/caza-sostenible/instituciones-y-organizaciones-internacionales-que-apoyan-la-caza-sostenible/).", unsafe_allow_html=True))
+        st.write("Fuente: **Fundación Caza Sostenible(%s)**." % " (https://www.fundacioncazasostenible.org/caza-sostenible/instituciones-y-organizaciones-internacionales-que-apoyan-la-caza-sostenible/).", unsafe_allow_html=True)
 
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
