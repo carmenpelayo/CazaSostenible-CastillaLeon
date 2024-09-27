@@ -243,6 +243,7 @@ if seleccion == "🏆 ¡Traza tu estrategia de caza sostenible!":
       st.balloons()
       st.subheader("🏆 ¡Tus resultados!")
       match = predecir_caza(opcion1, opcion2)
+      st.write("¡Asegúrate de cazar estos animales únicamente **durante los periodos permitidos**!)
       st.write("Siguiendo una estrategia de caza sostenible, estás contribuyendo al Objetivo 15 (*Vida de Ecosistemas Terrestres*) de los **Objetivos de Desarrollo Sostenible de las Naciones Unidas**.")
       st.image("images/ODS.png", width=300)
       
@@ -316,7 +317,7 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.write("Limitando tus sesiones de caza a los periodos permitidos, estás **respetando el ciclo natural de reproducción de los animales**, contribuyendo así a la **conservación de la biodiversidad en Castilla y León**.")
         st.table(periodos)
         st.image("images/periodos.png", use_column_width=True)
-        st.write("Fuente: **Junta de Castilla y León** (https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).")
+        st.write("Fuente: **Junta de Castilla y León(%s)**." % "(https://medioambiente.jcyl.es/web/es/caza-pesca/periodos-habiles.html).", unsafe_allow_html=True))
 
     # Métodos de caza
     with tab4:
@@ -438,11 +439,12 @@ if seleccion == "🎓 ¡Aprende más sobre la caza sostenible!":
         st.subheader("🌎 Ordenanzas Internacionales")
         st.write("Las siguientes instituciones y organizacions internacionales **promueven la caza sostenible** mediante la ordenanza de las siguientes **normativas** y **códigos de práctica**:")
         st.table(respaldos)
+        st.write("Fuente: **Fundación Caza Sostenible(%s)**." % " (https://www.fundacioncazasostenible.org/caza-sostenible/instituciones-y-organizaciones-internacionales-que-apoyan-la-caza-sostenible/).", unsafe_allow_html=True))
 
 if seleccion == "ℹ️ Más información":
     st.header("ℹ️ Más información")
-    st.write("Aquí puedes consultar más información sobre la aplicación, incluyendo una **explicación detallada del modelo de predicción** utilizado, **recursos adicionales de caza** y **links de referencia** al contacto de la desarrolladora y el código fuente.")
-    tab1, tab2, tab3 = st.tabs(["📈 Modelo Predictivo", "🎒 Más recursos", "👤 Referencia"])
+    st.write("Aquí puedes consultar más información sobre la aplicación, incluyendo una **explicación detallada del modelo de predicción** utilizado, **recursos adicionales de caza** y **links de referencias** al contacto de los desarrolladores, los datos utilizados y el código fuente.")
+    tab1, tab2, tab3 = st.tabs(["📈 Modelo Predictivo", "🎒 Más recursos", "👤 Referencias"])
     # Modelo predictivo
     with tab1:
         st.subheader("📈 Modelo de predicción de capturas")
@@ -464,9 +466,10 @@ if seleccion == "ℹ️ Más información":
         st.markdown("- [**Guía práctica del cazador**](%s)" % "https://medioambiente.jcyl.es/web/es/caza-pesca/guia-practica-cazador.html", unsafe_allow_html=True)
     # Autor
     with tab3:
-        st.subheader("👤 Referencia")
+        st.subheader("👤 Referencias")
         st.write("El presente recurso ha sido desarrollado por **[Carmen Pelayo Fernández](%s)**" % "https://www.linkedin.com/in/carmenpelayofernandez/", " y **[Salvador Sánchez-Terán Manzanedo](%s)**." % "https://www.linkedin.com/in/salvador-sánchez-terán-manzanedo-b04977180/")
         st.write("Todos los códigos fuente pueden ser consultados en **[GitHub](%s)**." % "https://github.com/carmenpelayo/HuntPrediction", unsafe_allow_html=True)
+        st.write("Los datos utilizados han sido obtenidos del **[Portal de Datos Abiertos de la Junta de Castilla y León](%s)**." % "https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html", unsafe_allow_html=True)
         
     
 
